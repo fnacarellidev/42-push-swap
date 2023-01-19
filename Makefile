@@ -1,6 +1,6 @@
 NAME = push_swap
 FLAGS = -Wall -Wextra -Werror -g3
-FILES = node_operations
+FILES = node_operations new_node free_list
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
