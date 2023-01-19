@@ -6,21 +6,23 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:54:35 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 18:17:25 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:57:31 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static int	list_len(t_node **head)
+int	list_len(t_node **head)
 {
-	int	count;
+	t_node	*tmp;
+	int		count;
 
 	count = 0;
 	if (head)
 	{
-		while (*head)
+		tmp = *head;
+		while (tmp)
 		{
-			*head = (*head)->next;
+			tmp = tmp->next;
 			count++;
 		}
 	}
