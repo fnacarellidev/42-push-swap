@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 18:09:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 18:09:41 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:25:30 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -25,4 +25,3 @@ t_node	*new_node(int data)
 	new_node->next = NULL;
 	return (new_node);
 }
-
