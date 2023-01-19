@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:54:35 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 17:33:24 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:37:31 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -46,6 +46,9 @@ void	node_add_back(t_node **head, t_node *node)
 
 void	node_add_front(t_node **head, t_node *node)
 {
-	node->next = *head;
-	*head = node;
+	if (head)
+	{
+		node->next = *head;
+		*head = node;
+	}
 }
