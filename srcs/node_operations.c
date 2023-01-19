@@ -69,9 +69,18 @@ void	del_last_node(t_node **head)
 	{
 		if (*head != NULL)
 		{
-			while (tmp->next != NULL)
-				tmp = tmp->next;
-			free(tmp);
+			if (tmp->next == NULL)
+			{
+				free(tmp);
+				*head = NULL;
+			}
+			else
+			{
+				while (tmp->next->next != NULL)
+					tmp = tmp->next;
+				free(tmp->next);
+				tmp->next = NULL;
+			}
 		}
 	}
 }
