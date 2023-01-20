@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:11:35 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 22:39:08 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/19 22:47:11 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -47,4 +47,10 @@ void	swap_b(t_node **stack_b)
 		return ;
 	}
 	swap_first_two_nodes(stack_b);
+}
+
+void	ss(t_node **stack_a, t_node **stack_b)
+{
+	swap_a(stack_a);
+	swap_b(stack_b);
 }
