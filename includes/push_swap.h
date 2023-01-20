@@ -35,5 +35,6 @@ void	ss(t_node **stack_a, t_node **stack_b);
 void	push_a(t_node **stack_a, t_node **stack_b);
 void	push_b(t_node **stack_a, t_node **stack_b);
 void	rotate_a(t_node **stack_a);
+void	rotate_b(t_node **stack_b);
 
 #endif
