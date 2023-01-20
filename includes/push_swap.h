@@ -38,5 +38,6 @@ void	rotate_a(t_node **stack_a);
 void	rotate_b(t_node **stack_b);
 void	rr(t_node **stack_a, t_node **stack_b);
 void	rev_rotate_a(t_node **stack_a);
+void	rev_rotate_b(t_node **stack_b);
 
 #endif
