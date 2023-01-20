@@ -44,3 +44,9 @@ void	rotate_b(t_node **stack_b)
 	first_node->next = NULL;
 	node_add_back(stack_b, first_node);
 }
+
+void	rr(t_node **stack_a, t_node **stack_b)
+{
+	rotate_a(stack_a);
+	rotate_b(stack_b);
+}
