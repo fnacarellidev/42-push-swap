@@ -20,3 +20,16 @@ static void	swap_first_two_nodes(t_node **head)
 	tmp->next = (*head);
 	*head = tmp;
 }
+
+void	swap_a(t_node **stack_a)
+{
+	int	elements;
+
+	elements = list_len(stack_a);
+	if (elements < 2)
+	{
+		write(1, "Couldn't swap stack_a, should have at least 2 elements.\n", 56);
+		return ;
+	}
+	swap_first_two_nodes(stack_a);
+}
