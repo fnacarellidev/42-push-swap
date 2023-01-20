@@ -50,3 +50,9 @@ void	rev_rotate_b(t_node **stack_b)
 	tmp->next = NULL;
 	node_add_front(stack_b, last_node);
 }
+
+void	rrr(t_node **stack_a, t_node **stack_b)
+{
+	rev_rotate_a(stack_a);
+	rev_rotate_b(stack_b);
+}
