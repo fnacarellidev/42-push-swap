@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 22:46:36 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/19 23:06:53 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -32,5 +32,6 @@ void	init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
 void	swap_a(t_node **stack_a);
 void	swap_b(t_node **stack_b);
 void	ss(t_node **stack_a, t_node **stack_b);
+void	push_a(t_node **stack_a, t_node **stack_b);
 
 #endif
