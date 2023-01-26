@@ -17,3 +17,10 @@ static int	has_input(int argc)
 		return (0);
 	return (1);
 }
+
+static int	power(int base, int exponent)
+{
+	if (exponent == 1)
+		return (base);
+	return (base * power(base, exponent - 1));
+}
