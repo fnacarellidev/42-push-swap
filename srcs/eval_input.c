@@ -18,12 +18,8 @@ static int	has_input(int argc)
 	return (1);
 }
 
-static int	power(int base, int exponent)
 static int	has_non_integer(char **argv)
 {
-	if (exponent == 1)
-		return (base);
-	return (base * power(base, exponent - 1));
 	int	i;
 	int	j;
 
