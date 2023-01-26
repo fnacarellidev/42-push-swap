@@ -49,5 +49,6 @@ int			ft_issign(char c);
 int			ft_isnumber(char c);
 int			ft_isspace(char c);
 int			ft_has_only_sign(char *str);
+long int	ft_latoi(const char *nptr);
 
 #endif
