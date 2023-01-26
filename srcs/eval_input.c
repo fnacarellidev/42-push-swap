@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 02:38:37 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:10:54 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -15,6 +15,26 @@ static int	has_input(int argc)
 {
 	if (argc < 2)
 		return (0);
+	return (1);
+}
+
+static int	is_in_int_range(char **argv)
+{
+	int			i;
+	int			max_int;
+	int			min_int;
+	long int	latoi_ret;
+
+	i = 0;
+	max_int = ft_power(2, 31) - 1;
+	min_int = ft_power(2, 31) * -1;
+	while (argv[i])
+	{
+		latoi_ret = ft_latoi(argv[i]);
+		if (latoi_ret > max_int || latoi_ret < min_int)
+			return (0);
+		i++;
+	}
 	return (1);
 }
 
