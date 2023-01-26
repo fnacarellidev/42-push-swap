@@ -65,4 +65,22 @@ static int	has_duplicate(char **argv)
 	free(ptr);
 	return (0);
 }
+
+void	eval_input(int argc, char **argv)
+{
+	if (!has_input(argc))
+	{
+		write(1, "Usage: ./push_swap nbr1 nbr2 nbr3 .. nbrN\n", 42);
+		exit(1);
+	}
+	if (has_non_integer(argv))
+	{
+		write(1, "Shouldn't have a non integer parameter passed to the program\n", 61);
+		exit(1);
+	}
+	if (has_duplicate(argv))
+	{
+		write(1, "Program shouldn't have any duplicate numbers\n", 45);
+		exit(1);
+	}
 }
