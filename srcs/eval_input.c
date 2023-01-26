@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 02:26:49 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/26 02:38:37 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -70,17 +70,17 @@ void	eval_input(int argc, char **argv)
 {
 	if (!has_input(argc))
 	{
-		write(1, "Usage: ./push_swap nbr1 nbr2 nbr3 .. nbrN\n", 42);
+		write(1, "Error\n", 6);
 		exit(1);
 	}
 	if (has_non_integer(argv))
 	{
-		write(1, "Shouldn't have a non integer parameter passed to the program\n", 61);
+		write(1, "Error\n", 6);
 		exit(1);
 	}
 	if (has_duplicate(argv))
 	{
-		write(1, "Program shouldn't have any duplicate numbers\n", 45);
+		write(1, "Error\n", 6);
 		exit(1);
 	}
 }
