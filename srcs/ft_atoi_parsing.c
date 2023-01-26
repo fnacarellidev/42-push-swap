@@ -31,3 +31,17 @@ int	ft_isspace(char c)
 		return (1);
 	return (0);
 }
+
+int	ft_has_only_sign(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!ft_issign(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
