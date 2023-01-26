@@ -24,3 +24,10 @@ int	ft_isnumber(char c)
 		return (1);
 	return (0);
 }
+
+int	ft_isspace(char c)
+{
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
