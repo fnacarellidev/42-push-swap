@@ -6,47 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:21:29 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 19:21:39 by fnacarel         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 23:16:34 by fnacarel          #+#    #+#             */
-/*   Updated: 2022/09/02 03:05:32 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:38:45 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
-
-static int	ft_isspace(char c);
-static int	ft_isnumber(char c);
-static int	ft_issign(char c);
-
-static int	ft_issign(char c)
-{
-	if (c == '-' || c == '+')
-		return (1);
-	return (0);
-}
-
-static int	ft_isnumber(char c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
-
-static int	ft_isspace(char c)
-{
-	if (c == 32 || (c >= 9 && c <= 13))
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *nptr)
 {
