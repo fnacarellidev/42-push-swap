@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 02:09:17 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:01:39 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -43,5 +43,6 @@ void	rrr(t_node **stack_a, t_node **stack_b);
 void	eval_input(int argc, char **argv);
 int		matr_len(void **matrix);
 int		*atoi_argv(char **argv);
+int		is_sorted(t_node *stack);
 
 #endif
