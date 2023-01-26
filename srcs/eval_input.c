@@ -46,10 +46,12 @@ static int	has_non_integer(char **argv)
 	i = 1;
 	while (argv[i])
 	{
+		if (ft_has_only_sign(argv[i]))
+				return (1);
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if (argv[i][j] < 48 || argv[i][j] > 57)
+			if ((argv[i][j] < 48 || argv[i][j] > 57) && !ft_issign(argv[i][j]))
 				return (1);
 			j++;
 		}
