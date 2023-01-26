@@ -17,3 +17,10 @@ int	ft_issign(char c)
 		return (1);
 	return (0);
 }
+
+int	ft_isnumber(char c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
+}
