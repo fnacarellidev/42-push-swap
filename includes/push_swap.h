@@ -44,5 +44,6 @@ void		eval_input(int argc, char **argv);
 int			matr_len(void **matrix);
 int			*atoi_argv(char **argv);
 int			is_sorted(t_node *stack);
+int			ft_power(int base, int exponent);
 
 #endif
