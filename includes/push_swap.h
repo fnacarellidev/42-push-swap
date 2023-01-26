@@ -42,5 +42,6 @@ void	rev_rotate_b(t_node **stack_b);
 void	rrr(t_node **stack_a, t_node **stack_b);
 void	eval_input(int argc, char **argv);
 int		matr_len(void **matrix);
+int		*atoi_argv(char **argv);
 
 #endif
