@@ -105,4 +105,9 @@ void	eval_input(int argc, char **argv)
 		write(1, "Error\n", 6);
 		exit(1);
 	}
+	if (!is_in_int_range(argv))
+	{
+		write(1, "Error\n", 6);
+		exit(1);
+	}
 }
