@@ -8,7 +8,8 @@ FILES = node_operations \
 		swap_operations \
 		push_operations \
 		rotate_operations \
-		reverse_rotate_operations
+		reverse_rotate_operations \
+		eval_input
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
