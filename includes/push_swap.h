@@ -47,5 +47,6 @@ int			is_sorted(t_node *stack);
 int			ft_power(int base, int exponent);
 int			ft_issign(char c);
 int			ft_isnumber(char c);
+int			ft_isspace(char c);
 
 #endif
