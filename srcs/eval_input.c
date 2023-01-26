@@ -37,4 +37,32 @@ static int	has_non_integer(char **argv)
 	}
 	return (0);
 }
+
+static int	has_duplicate(char **argv)
+{
+	int	i;
+	int	j;
+	int	*ptr;
+	int	size;
+
+	i = 1;
+	ptr = atoi_argv(argv);
+	size = matr_len((void **)argv) - 1;
+	while (i < size)
+	{
+		j = 0;
+		while (j < i)
+		{
+			if (ptr[i] == ptr[j])
+			{
+				free(ptr);
+				return (1);
+			}
+			j++;
+		}
+		i++;
+	}
+	free(ptr);
+	return (0);
+}
 }
