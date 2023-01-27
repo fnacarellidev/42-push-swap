@@ -34,6 +34,7 @@ int			ft_power(int base, int exponent);
 void		free_list(t_node **head);
 void		swap_a(t_node **stack_a);
 void		swap_b(t_node **stack_b);
+void		sort_five(t_node **stack_a, t_node **stack_b);
 void		rotate_a(t_node **stack_a);
 void		rotate_b(t_node **stack_b);
 void		sort_three(t_node **stack);
