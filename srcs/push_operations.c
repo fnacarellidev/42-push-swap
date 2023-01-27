@@ -6,14 +6,16 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:48:04 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 23:20:41 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:44:27 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int	list_is_empty(int elements)
+static int	list_is_empty(int elements)
 {
-	return (elements);
+	if (elements == 0)
+		return (1);
+	return (0);
 }
 
 void	push_a(t_node **stack_a, t_node **stack_b)
@@ -22,7 +24,7 @@ void	push_a(t_node **stack_a, t_node **stack_b)
 	int		elements;
 
 	elements = list_len(stack_b);
-	if (!list_is_empty(elements))
+	if (list_is_empty(elements))
 	{
 		write(1, "Can't push_a, stack_b is empty.\n", 32);
 		return ;
@@ -38,7 +40,7 @@ void	push_b(t_node **stack_a, t_node **stack_b)
 	int		elements;
 
 	elements = list_len(stack_a);
-	if (!list_is_empty(elements))
+	if (list_is_empty(elements))
 	{
 		write(1, "Can't push_b, stack_a is empty.\n", 32);
 		return ;
