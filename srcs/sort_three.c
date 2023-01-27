@@ -30,3 +30,17 @@ static void	which_move_to_do(t_node **stack, int data1, int data2, int data3)
 	else
 		rev_rotate_a(stack);
 }
+
+void	sort_three(t_node **stack)
+{
+	int	data1;
+	int	data2;
+	int	data3;
+
+	if (is_sorted(*stack))
+		return ;
+	data1 = (*stack)->data;
+	data2 = (*stack)->next->data;
+	data3 = (*stack)->next->next->data;
+	which_move_to_do(stack, data1, data2, data3);
+}
