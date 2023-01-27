@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 09:21:37 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/20 09:37:48 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:49:05 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -26,6 +26,7 @@ void	rotate_a(t_node **stack_a)
 	*stack_a = (*stack_a)->next;
 	first_node->next = NULL;
 	node_add_back(stack_a, first_node);
+	write(1, "ra\n", 3);
 }
 
 void	rotate_b(t_node **stack_b)
@@ -43,10 +44,12 @@ void	rotate_b(t_node **stack_b)
 	*stack_b = (*stack_b)->next;
 	first_node->next = NULL;
 	node_add_back(stack_b, first_node);
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_node **stack_a, t_node **stack_b)
 {
 	rotate_a(stack_a);
 	rotate_b(stack_b);
+	write(1, "rr\n", 3);
 }
