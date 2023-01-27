@@ -16,7 +16,7 @@ FILES = node_operations \
 		ft_latoi \
 		ft_power \
 		ft_atoi_parsing \
-		sort_three
+		sort_three \
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
