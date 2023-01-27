@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 16:12:15 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:20:21 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -49,6 +49,7 @@ int			ft_issign(char c);
 int			ft_isnumber(char c);
 int			ft_isspace(char c);
 int			ft_has_only_sign(char *str);
+void		sort_three(t_node **stack);
 long int	ft_latoi(const char *nptr);
 
 #endif
