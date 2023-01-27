@@ -28,3 +28,16 @@ static void	fix_four(t_node **stack_a, t_node **stack_b)
 	else if (tmp->data > tmp->next->data)
 		swap_a(stack_a);
 }
+
+void	sort_five(t_node **stack_a, t_node **stack_b)
+{
+	push_b(stack_a, stack_b);
+	push_b(stack_a, stack_b);
+	sort_three(stack_a);
+	push_a(stack_a, stack_b);
+	if (!is_sorted(*stack_a))
+		fix_four(stack_a, stack_b);
+	push_a(stack_a, stack_b);
+	if (!is_sorted(*stack_a))
+		fix_five(stack_a, stack_b);
+}
