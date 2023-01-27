@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/27 18:20:21 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:32:56 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -21,35 +21,35 @@ typedef struct s_node
 }	t_node;
 
 t_node		*new_node(int data);
-int			list_len(t_node **head);
-void		del_last_node(t_node **head);
-void		del_first_node(t_node **head);
-void		node_add_back(t_node **head, t_node *node);
-void		node_add_front(t_node **head, t_node *node);
-void		free_list(t_node **head);
-int			ft_atoi(const char *nptr);
-void		init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
-void		swap_a(t_node **stack_a);
-void		swap_b(t_node **stack_b);
-void		ss(t_node **stack_a, t_node **stack_b);
-void		push_a(t_node **stack_a, t_node **stack_b);
-void		push_b(t_node **stack_a, t_node **stack_b);
-void		rotate_a(t_node **stack_a);
-void		rotate_b(t_node **stack_b);
-void		rr(t_node **stack_a, t_node **stack_b);
-void		rev_rotate_a(t_node **stack_a);
-void		rev_rotate_b(t_node **stack_b);
-void		rrr(t_node **stack_a, t_node **stack_b);
-void		eval_input(int argc, char **argv);
+int			ft_issign(char c);
+int			ft_isspace(char c);
+int			ft_isnumber(char c);
 int			matr_len(void **matrix);
+int			list_len(t_node **head);
 int			*atoi_argv(char **argv);
 int			is_sorted(t_node *stack);
-int			ft_power(int base, int exponent);
-int			ft_issign(char c);
-int			ft_isnumber(char c);
-int			ft_isspace(char c);
+int			ft_atoi(const char *nptr);
 int			ft_has_only_sign(char *str);
+int			ft_power(int base, int exponent);
+void		free_list(t_node **head);
+void		swap_a(t_node **stack_a);
+void		swap_b(t_node **stack_b);
+void		rotate_a(t_node **stack_a);
+void		rotate_b(t_node **stack_b);
 void		sort_three(t_node **stack);
+void		del_last_node(t_node **head);
+void		del_first_node(t_node **head);
+void		rev_rotate_a(t_node **stack_a);
+void		rev_rotate_b(t_node **stack_b);
+void		eval_input(int argc, char **argv);
+void		ss(t_node **stack_a, t_node **stack_b);
+void		rr(t_node **stack_a, t_node **stack_b);
+void		rrr(t_node **stack_a, t_node **stack_b);
+void		push_a(t_node **stack_a, t_node **stack_b);
+void		push_b(t_node **stack_a, t_node **stack_b);
+void		node_add_back(t_node **head, t_node *node);
+void		node_add_front(t_node **head, t_node *node);
+void		init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
 long int	ft_latoi(const char *nptr);
 
 #endif
