@@ -11,11 +11,21 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+static int	get_max_val(t_node **stack)
 {
+	int		max;
 	t_node	*tmp;
 
-	tmp = *stack_a;
-	if (tmp->data > tmp->next->next->next->data)
+	tmp = *stack;
+	max = tmp->data;
+	while (tmp != NULL)
+	{
+		if (tmp->data > max)
+			max = tmp->data;
+		tmp = tmp->next;
+	}
+	return (max);
+}
 		rotate_a(stack_a);
 	else if (tmp->data > tmp->next->next->data)
 	{
