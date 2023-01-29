@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:10:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/27 20:00:26 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/01/28 21:23:27 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -31,13 +31,23 @@ static void	fix_four(t_node **stack_a, t_node **stack_b)
 
 void	sort_five(t_node **stack_a, t_node **stack_b)
 {
-	push_b(stack_a, stack_b);
-	push_b(stack_a, stack_b);
+	int	max;
+	int	min;
+	int	stack_b_size;
+
+	stack_b_size = 0;
+	max = get_max_val(stack_a);
+	min = get_min_val(stack_a);
+	while (stack_b_size < 2)
+	{
+		if ((*stack_a)->data == min || (*stack_a)->data == max)
+		{
+			push_b(stack_a, stack_b);
+			stack_b_size++;
+		}
+		else
+			rotate_a(stack_a);
+	}
 	sort_three(stack_a);
-	push_a(stack_a, stack_b);
-	if (!is_sorted(*stack_a))
-		fix_four(stack_a, stack_b);
-	push_a(stack_a, stack_b);
-	if (!is_sorted(*stack_a))
-		fix_five(stack_a, stack_b);
+	fix_five(stack_a, stack_b, max);
 }
