@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static void	fix_four(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*tmp;
 
