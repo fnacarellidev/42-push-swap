@@ -42,16 +42,18 @@ static int	get_min_val(t_node **stack)
 	}
 	return (min);
 }
+
+static void	fix_five(t_node **stack_a, t_node **stack_b, int max)
+{
+	push_a(stack_a, stack_b);
+	push_a(stack_a, stack_b);
+	if ((*stack_a)->data == max)
 		rotate_a(stack_a);
-	else if (tmp->data > tmp->next->next->data)
+	else
 	{
 		swap_a(stack_a);
-		push_b(stack_a, stack_b);
-		swap_a(stack_a);
-		push_a(stack_a, stack_b);
+		rotate_a(stack_a);
 	}
-	else if (tmp->data > tmp->next->data)
-		swap_a(stack_a);
 }
 
 void	sort_five(t_node **stack_a, t_node **stack_b)
