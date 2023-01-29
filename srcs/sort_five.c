@@ -26,6 +26,22 @@ static int	get_max_val(t_node **stack)
 	}
 	return (max);
 }
+
+static int	get_min_val(t_node **stack)
+{
+	int		min;
+	t_node	*tmp;
+
+	tmp = *stack;
+	min = tmp->data;
+	while (tmp != NULL)
+	{
+		if (tmp->data < min)
+			min = tmp->data;
+		tmp = tmp->next;
+	}
+	return (min);
+}
 		rotate_a(stack_a);
 	else if (tmp->data > tmp->next->next->data)
 	{
