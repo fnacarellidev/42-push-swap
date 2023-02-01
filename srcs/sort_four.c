@@ -6,48 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:15:56 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/01 19:03:19 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:22:03 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
-
-static int	get_min_val(t_node **stack, int idx)
-{
-	int		i;
-	t_node	*tmp;
-
-	i = 0;
-	tmp = *stack;
-	while (i < idx)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	return (tmp->data);
-}
-
-static int	get_min_val_index(t_node **stack)
-{
-	int		i;
-	int		j;
-	int		min;
-	t_node	*tmp;
-
-	i = 0;
-	tmp = *stack;
-	min = tmp->data;
-	while (tmp != NULL)
-	{
-		if (tmp->data < min)
-		{
-			min = tmp->data;
-			j = i;
-		}
-		tmp = tmp->next;
-		i++;
-	}
-	return (j);
-}
 
 void	sort_four(t_node **stack_a, t_node **stack_b)
 {
