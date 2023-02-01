@@ -33,6 +33,8 @@ int			ft_has_only_sign(char *str);
 int			get_max_val(t_node **stack, int idx);
 int			get_min_val(t_node **stack, int idx);
 int			ft_power(int base, int exponent);
+int			get_min_val_index(t_node **stack);
+int			get_max_val_index(t_node **stack);
 void		free_list(t_node **head);
 void		swap_a(t_node **stack_a);
 void		swap_b(t_node **stack_b);
