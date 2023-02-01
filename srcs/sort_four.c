@@ -25,18 +25,28 @@ static int	get_min_val(t_node **stack, int idx)
 	}
 	return (tmp->data);
 }
+
+static int	get_min_val_index(t_node **stack)
+{
+	int		i;
+	int		j;
 	int		min;
 	t_node	*tmp;
 
+	i = 0;
 	tmp = *stack;
 	min = tmp->data;
 	while (tmp != NULL)
 	{
 		if (tmp->data < min)
+		{
 			min = tmp->data;
+			j = i;
+		}
 		tmp = tmp->next;
+		i++;
 	}
-	return (min);
+	return (j);
 }
 
 void	sort_four(t_node **stack_a, t_node **stack_b)
