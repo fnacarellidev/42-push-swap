@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/01 18:30:13 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:22:23 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -30,6 +30,8 @@ int			*atoi_argv(char **argv);
 int			is_sorted(t_node *stack);
 int			ft_atoi(const char *nptr);
 int			ft_has_only_sign(char *str);
+int			get_max_val(t_node **stack, int idx);
+int			get_min_val(t_node **stack, int idx);
 int			ft_power(int base, int exponent);
 void		free_list(t_node **head);
 void		swap_a(t_node **stack_a);
