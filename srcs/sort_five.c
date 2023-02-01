@@ -6,42 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:10:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/28 21:23:27 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:27:05 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
-
-static int	get_max_val(t_node **stack)
-{
-	int		max;
-	t_node	*tmp;
-
-	tmp = *stack;
-	max = tmp->data;
-	while (tmp != NULL)
-	{
-		if (tmp->data > max)
-			max = tmp->data;
-		tmp = tmp->next;
-	}
-	return (max);
-}
-
-static int	get_min_val(t_node **stack)
-{
-	int		min;
-	t_node	*tmp;
-
-	tmp = *stack;
-	min = tmp->data;
-	while (tmp != NULL)
-	{
-		if (tmp->data < min)
-			min = tmp->data;
-		tmp = tmp->next;
-	}
-	return (min);
-}
 
 static void	fix_five(t_node **stack_a, t_node **stack_b, int max)
 {
