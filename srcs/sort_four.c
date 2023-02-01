@@ -26,3 +26,15 @@ static int	get_min_val(t_node **stack)
 	}
 	return (min);
 }
+
+void	sort_four(t_node **stack_a, t_node **stack_b)
+{
+	int	min;
+
+	min = get_min_val(stack_a);
+	while ((*stack_a)->data != min)
+		rotate_a(stack_a);
+	push_b(stack_a, stack_b);
+	sort_three(stack_a);
+	push_a(stack_a, stack_b);
+}
