@@ -18,6 +18,7 @@ FILES = node_operations \
 		ft_atoi_parsing \
 		sort_three \
 		sort_five \
+		sort_four \
 		sort
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
@@ -25,12 +26,12 @@ OBJS = $(SRCS:%.c=%.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	cc $(FLAGS) main.c $(OBJS) -o $(NAME)
+	clang $(FLAGS) main.c $(OBJS) -o $(NAME)
 
 $(OBJS) : $(SRCS)
 
 %.o : %.c
-	cc $(FLAGS) -I ./ -c $< -o $@
+	clang $(FLAGS) -I ./ -c $< -o $@
 
 clean :
 	rm -rf $(OBJS)
