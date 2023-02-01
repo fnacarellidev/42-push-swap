@@ -11,8 +11,20 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static int	get_min_val(t_node **stack)
+static int	get_min_val(t_node **stack, int idx)
 {
+	int		i;
+	t_node	*tmp;
+
+	i = 0;
+	tmp = *stack;
+	while (i < idx)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	return (tmp->data);
+}
 	int		min;
 	t_node	*tmp;
 
