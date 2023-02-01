@@ -26,13 +26,17 @@ static void	fix_five(t_node **stack_a, t_node **stack_b, int max)
 
 void	sort_five(t_node **stack_a, t_node **stack_b)
 {
-	int	max;
 	int	min;
+	int	max;
 	int	stack_b_size;
+	int	min_val_index;
+	int	max_val_index;
 
 	stack_b_size = 0;
-	max = get_max_val(stack_a);
-	min = get_min_val(stack_a);
+	min_val_index = get_min_val_index(stack_a);
+	max_val_index = get_max_val_index(stack_a);
+	min = get_min_val(stack_a, min_val_index);
+	max = get_max_val(stack_a, max_val_index);
 	while (stack_b_size < 2)
 	{
 		if ((*stack_a)->data == min || (*stack_a)->data == max)
