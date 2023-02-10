@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 16:10:54 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/10 19:18:30 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -47,11 +47,12 @@ static int	has_non_integer(char **argv)
 	while (argv[i])
 	{
 		if (ft_has_only_sign(argv[i]))
-				return (1);
+			return (1);
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if ((argv[i][j] < 48 || argv[i][j] > 57) && !ft_issign(argv[i][j]))
+			if ((argv[i][j] < 48 || argv[i][j] > 57) && !ft_issign(argv[i][j])
+					&& !ft_isspace(argv[i][j]))
 				return (1);
 			j++;
 		}
