@@ -1,15 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int_ptr_from_argv.c                                :+:      :+:    :+:   */
+/*   ft_utils00.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 01:35:55 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 02:09:30 by fnacarel         ###   ########.fr       */
+/*   Created: 2023/02/10 19:11:58 by fnacarel          #+#    #+#             */
+/*   Updated: 2023/02/10 19:16:56 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
+
+void	free_list(t_node **head)
+{
+	int	i;
+	int	elements;
+
+	i = 0;
+	elements = list_len(head);
+	while (i < elements)
+	{
+		del_last_node(head);
+		i++;
+	}
+	free(head);
+}
+
+int	matr_len(void **matrix)
+{
+	int	i;
+
+	i = 0;
+	while (matrix[i])
+		i++;
+	return (i);
+}
+
+t_node	*new_node(int data)
+{
+	t_node	*new_node;
+
+	new_node = malloc(sizeof(t_node));
+	if (new_node == NULL)
+	{
+		write(1, "Allocation failed at new_node function\n", 39);
+		return (NULL);
+	}
+	new_node->data = data;
+	new_node->next = NULL;
+	return (new_node);
+}
+
+int	ft_power(int base, int exponent)
+{
+	if (exponent == 1)
+		return (base);
+	return (base * ft_power(base, exponent - 1));
+}
 
 int	*atoi_argv(char **argv)
 {
