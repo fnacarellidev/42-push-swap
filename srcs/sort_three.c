@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:40:27 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/13 15:02:01 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:09:17 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -33,12 +33,10 @@ static void	which_move_to_do(t_node **stack, int idx1, int idx2, int idx3)
 
 void	sort_three(t_node **stack)
 {
-	int first_idx;
-	int second_idx;
-	int third_idx;
+	int	first_idx;
+	int	second_idx;
+	int	third_idx;
 
-	if (is_sorted(*stack))
-		return ;
 	first_idx = (*stack)->idx;
 	second_idx = (*stack)->next->idx;
 	third_idx = (*stack)->next->next->idx;
