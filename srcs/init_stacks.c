@@ -11,6 +11,20 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+static int	index_for_curr_node(t_node *head_a, t_node **node_being_analyzed)
+{
+	int		idx;
+
+	idx = 0;
+	while (head_a != NULL)
+	{
+		if (head_a->data < (*node_being_analyzed)->data)
+			idx++;
+		head_a = head_a->next;
+	}
+	return (idx);
+}
+
 static void	set_stack_indexes(t_node ***stack_a)
 {
 	int		i;
