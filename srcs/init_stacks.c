@@ -6,10 +6,27 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:18:45 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 19:55:00 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:03:37 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
+
+static void	set_stack_indexes(t_node ***stack_a)
+{
+	int		i;
+	int		list_size;
+	t_node	*node_to_assign;
+
+	i = 0;
+	node_to_assign = **stack_a;
+	list_size = list_len(*stack_a);
+	while (i < list_size)
+	{
+		node_to_assign->idx = index_for_curr_node(**stack_a, &node_to_assign);
+		i++;
+		node_to_assign = node_to_assign->next;
+	}
+}
 
 void	init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv)
 {
@@ -29,4 +46,5 @@ void	init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv)
 		node_add_back(*stack_a, node);
 		i++;
 	}
+	set_stack_indexes(stack_a);
 }
