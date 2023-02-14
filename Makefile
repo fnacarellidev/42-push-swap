@@ -17,7 +17,8 @@ FILES = node_operations \
 		get_val \
 		ft_utils00 \
 		sort \
-		sort_big
+		sort_big \
+		set_target_pos
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
