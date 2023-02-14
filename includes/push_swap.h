@@ -42,6 +42,7 @@ int			get_min_val(t_node **stack, int idx);
 int			ft_power(int base, int exponent);
 int			get_min_val_index(t_node **stack);
 int			get_max_val_index(t_node **stack);
+int			get_position_with_cheapest_cost(t_node *stack_b);
 void		free_list(t_node **head);
 void		swap_a(t_node **stack_a);
 void		swap_b(t_node **stack_b);
