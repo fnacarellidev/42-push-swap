@@ -24,3 +24,15 @@ static int	get_closest_superior_idx(t_node *stack_a, t_node *node_b)
 	}
 	return (closest_superior_idx);
 }
+
+void	set_target_pos(t_node **stack_a, t_node *node_b)
+{
+	t_node	*head;
+	int		closest_superior_idx;
+
+	head = *stack_a;
+	closest_superior_idx = get_closest_superior_idx(*stack_a, node_b);
+	while (head->idx != closest_superior_idx)
+		head = head->next;
+	node_b->target_pos = head->curr_pos;
+}
