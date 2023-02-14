@@ -25,3 +25,23 @@ static int	get_middle_idx(t_node *stack_a)
 	}
 	return (stack_a->idx);
 }
+
+static void	set_positions(t_node *stack_a, t_node *stack_b)
+{
+	int	i;
+
+	i = 0;
+	while (stack_a != NULL)
+	{
+		stack_a->curr_pos = i;
+		i++;
+		stack_a = stack_a->next;
+	}
+	i = 0;
+	while (stack_b != NULL)
+	{
+		stack_b->curr_pos = i;
+		i++;
+		stack_b = stack_b->next;
+	}
+}
