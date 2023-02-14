@@ -45,3 +45,19 @@ static void	set_positions(t_node *stack_a, t_node *stack_b)
 		stack_b = stack_b->next;
 	}
 }
+
+static void	transfer_to_b(t_node **stack_a, t_node **stack_b)
+{
+	t_node	*tmp;
+	int		middle_index;
+
+	while (list_len(stack_a) > 3)
+	{
+		middle_index = get_middle_idx(*stack_a);
+		tmp = *stack_a;
+		if (tmp->idx < middle_index)
+			push_b(stack_a, stack_b);
+		else
+			rotate_a(stack_a);
+	}
+}
