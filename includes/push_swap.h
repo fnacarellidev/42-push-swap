@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/13 22:59:04 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/14 01:48:19 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -21,6 +21,8 @@ typedef struct s_node
 	int				idx;
 	int				curr_pos;
 	int				target_pos;
+	int				cost_a;
+	int				cost_b;
 	struct s_node	*next;
 }	t_node;
 
