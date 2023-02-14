@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:48:04 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/27 18:48:10 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/13 21:44:16 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -30,6 +30,7 @@ void	push_a(t_node **stack_a, t_node **stack_b)
 		return ;
 	}
 	copy = new_node((*stack_b)->data);
+	copy->idx = (*stack_b)->idx;
 	del_first_node(stack_b);
 	node_add_front(stack_a, copy);
 	write(1, "pa\n", 3);
@@ -47,6 +48,7 @@ void	push_b(t_node **stack_a, t_node **stack_b)
 		return ;
 	}
 	copy = new_node((*stack_a)->data);
+	copy->idx = (*stack_a)->idx;
 	del_first_node(stack_a);
 	node_add_front(stack_b, copy);
 	write(1, "pb\n", 3);
