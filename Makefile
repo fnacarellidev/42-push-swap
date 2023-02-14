@@ -21,6 +21,7 @@ FILES = node_operations \
 		set_target_pos \
 		calculate_costs \
 		ft_abs \
+		perform_costs
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
