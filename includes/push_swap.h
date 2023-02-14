@@ -27,6 +27,7 @@ typedef struct s_node
 }	t_node;
 
 t_node		*new_node(int data);
+int			ft_abs(int i);
 int			ft_issign(char c);
 int			ft_isspace(char c);
 int			ft_isnumber(char c);
