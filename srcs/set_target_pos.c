@@ -29,10 +29,10 @@ static int	get_closest_superior_idx(t_node *stack_a, t_node *node_b)
 {
 	int	closest_superior_idx;
 
-	closest_superior_idx = stack_a->idx;
+	closest_superior_idx = get_highest_idx(stack_a);
 	while (stack_a != NULL)
 	{
-		if ((stack_a->idx < closest_superior_idx || stack_a->idx == node_b->idx + 1) && node_b->idx < stack_a->idx)
+		if (stack_a->idx < closest_superior_idx && node_b->idx < stack_a->idx)
 			closest_superior_idx = stack_a->idx;
 		stack_a = stack_a->next;
 	}
