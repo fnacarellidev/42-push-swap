@@ -6,17 +6,17 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 01:36:08 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/14 03:41:01 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/14 12:53:27 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-void	perform_cost_a(t_node **stack_a, t_node **stack_b)
+void	perform_cost_a(t_node **stack_a, int cost_a)
 {
 	int	i;
 
-	i = (*stack_b)->cost_a;
-	if ((*stack_b)->cost_a > 0)
+	i = cost_a;
+	if (cost_a > 0)
 	{
 		while (i > 0)
 		{
@@ -31,16 +31,15 @@ void	perform_cost_a(t_node **stack_a, t_node **stack_b)
 			rev_rotate_a(stack_a);
 			i++;
 		}
-
 	}
 }
 
-void	perform_cost_b(t_node **stack_b)
+void	perform_cost_b(t_node **stack_b, int cost_b)
 {
 	int	i;
 
-	i = (*stack_b)->cost_b;
-	if ((*stack_b)->cost_b > 0)
+	i = cost_b;
+	if (cost_b > 0)
 	{
 		while (i > 0)
 		{
@@ -68,8 +67,8 @@ void	perform_cheapest_action(t_node **stack_a, t_node **stack_b)
 	while (tmp->curr_pos != cheapest_cost_pos)
 		tmp = tmp->next;
 	if (tmp->cost_a != 0)
-		perform_cost_a(stack_a, stack_b);
+		perform_cost_a(stack_a, tmp->cost_a);
 	if (tmp->cost_b != 0)
-		perform_cost_b(stack_b);
+		perform_cost_b(stack_b, tmp->cost_b);
 	push_a(stack_a, stack_b);
 }
