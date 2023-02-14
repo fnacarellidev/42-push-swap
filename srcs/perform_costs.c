@@ -34,3 +34,26 @@ void	perform_cost_a(t_node **stack_a, t_node **stack_b)
 
 	}
 }
+
+void	perform_cost_b(t_node **stack_b)
+{
+	int	i;
+
+	i = (*stack_b)->cost_b;
+	if ((*stack_b)->cost_b > 0)
+	{
+		while (i > 0)
+		{
+			rotate_b(stack_b);
+			i--;
+		}
+	}
+	else
+	{
+		while (i < 0)
+		{
+			rev_rotate_b(stack_b);
+			i++;
+		}
+	}
+}
