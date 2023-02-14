@@ -6,10 +6,24 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 22:58:13 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/14 05:15:16 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/14 10:40:39 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
+
+int			get_highest_idx(t_node *stack_a)
+{
+	int	highest;
+
+	highest = stack_a->idx;
+	while (stack_a != NULL)
+	{
+		if (stack_a->idx > highest)
+			highest = stack_a->idx;
+		stack_a = stack_a->next;
+	}
+	return (highest);
+}
 
 static int	get_closest_superior_idx(t_node *stack_a, t_node *node_b)
 {
