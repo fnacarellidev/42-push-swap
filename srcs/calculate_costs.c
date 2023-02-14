@@ -30,3 +30,15 @@ static int	calc_cost_b(t_node *stack_b, t_node *node_b)
 		return (node_b->curr_pos);
 	return (node_b->curr_pos - size_stack_b);
 }
+void	set_costs(t_node *stack_a, t_node *stack_b)
+{
+	t_node	*tmp;
+
+	tmp = stack_b;
+	while (tmp != NULL)
+	{
+		tmp->cost_a = calc_cost_a(stack_a, tmp);
+		tmp->cost_b = calc_cost_b(stack_b, tmp);
+		tmp = tmp->next;
+	}
+}
