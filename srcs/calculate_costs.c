@@ -20,3 +20,13 @@ static int	calc_cost_a(t_node *stack_a, t_node *node_b)
 		return (node_b->target_pos);
 	return (node_b->target_pos - size_stack_a);
 }
+
+static int	calc_cost_b(t_node *stack_b, t_node *node_b)
+{
+	int	size_stack_b;
+
+	size_stack_b = list_len(&stack_b);
+	if (node_b->curr_pos <= size_stack_b / 2)
+		return (node_b->curr_pos);
+	return (node_b->curr_pos - size_stack_b);
+}
