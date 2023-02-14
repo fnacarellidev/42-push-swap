@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/13 18:55:14 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/13 22:59:04 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -60,6 +60,7 @@ void		node_add_back(t_node **head, t_node *node);
 void		node_add_front(t_node **head, t_node *node);
 void		sort_big(t_node **stack_a, t_node **stack_b);
 void		sort_four(t_node **stack_a, t_node **stack_b);
+void		set_target_pos(t_node **stack_a, t_node *node_b);
 void		sort(t_node **stack_a, t_node **stack_b, int size_a);
 void		init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
 long int	ft_latoi(const char *nptr);
