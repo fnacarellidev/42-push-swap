@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:18:45 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/13 15:03:37 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/13 22:53:48 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -15,7 +15,7 @@ static int	index_for_curr_node(t_node *head_a, t_node **node_being_analyzed)
 {
 	int		idx;
 
-	idx = 0;
+	idx = 1;
 	while (head_a != NULL)
 	{
 		if (head_a->data < (*node_being_analyzed)->data)
