@@ -57,3 +57,19 @@ void	perform_cost_b(t_node **stack_b)
 		}
 	}
 }
+
+void	perform_cheapest_action(t_node **stack_a, t_node **stack_b)
+{
+	t_node	*tmp;
+	int		cheapest_cost_pos;
+
+	tmp = *stack_b;
+	cheapest_cost_pos = get_position_with_cheapest_cost(*stack_b);
+	while (tmp->curr_pos != cheapest_cost_pos)
+		tmp = tmp->next;
+	if (tmp->cost_a != 0)
+		perform_cost_a(stack_a, stack_b);
+	if (tmp->cost_b != 0)
+		perform_cost_b(stack_b);
+	push_a(stack_a, stack_b);
+}
