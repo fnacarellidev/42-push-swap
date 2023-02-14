@@ -62,6 +62,7 @@ void		push_a(t_node **stack_a, t_node **stack_b);
 void		push_b(t_node **stack_a, t_node **stack_b);
 void		node_add_back(t_node **head, t_node *node);
 void		node_add_front(t_node **head, t_node *node);
+void		set_costs(t_node *stack_a, t_node *stack_b);
 void		sort_big(t_node **stack_a, t_node **stack_b);
 void		sort_four(t_node **stack_a, t_node **stack_b);
 void		set_target_pos(t_node **stack_a, t_node *node_b);
