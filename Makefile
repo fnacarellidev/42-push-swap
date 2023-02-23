@@ -16,7 +16,8 @@ FILES = push_swap_movements/swap_operations \
 		sort \
 		algorithm_setters \
 		calculate_costs \
-		perform_costs
+		perform_costs \
+		compare_indexes \
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
