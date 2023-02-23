@@ -55,4 +55,6 @@ void	perform_cheapest_action(t_node **stack_a, t_node **stack_b)
 	if (tmp->cost_b != 0)
 		solve_cost_b(stack_b, tmp->cost_b);
 	push_a(stack_a, stack_b);
+	if ((*stack_a)->idx > (*stack_a)->next->idx)
+		swap_a(stack_a);
 }
