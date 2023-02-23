@@ -14,6 +14,7 @@ FILES = push_swap_movements/swap_operations \
 		sort_three \
 		ft_utils00 \
 		sort \
+		algorithm_setters \
 		calculate_costs \
 		perform_costs
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
