@@ -48,9 +48,11 @@ void	perform_cheapest_action(t_node **stack_a, t_node **stack_b)
 	cheapest_cost_pos = get_position_with_cheapest_cost(*stack_b);
 	while (tmp->curr_pos != cheapest_cost_pos)
 		tmp = tmp->next;
+	if (tmp->cost_a != 0 && tmp->cost_b != 0)
+		solve_both(stack_a, &(tmp->cost_a), stack_b, &(tmp->cost_b));
 	if (tmp->cost_a != 0)
-		perform_cost_a(stack_a, tmp->cost_a);
+		solve_cost_a(stack_a, tmp->cost_a);
 	if (tmp->cost_b != 0)
-		perform_cost_b(stack_b, tmp->cost_b);
+		solve_cost_b(stack_b, tmp->cost_b);
 	push_a(stack_a, stack_b);
 }
