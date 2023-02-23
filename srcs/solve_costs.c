@@ -11,6 +11,28 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+void	solve_both(t_node **stack_a, int *cost_a, t_node **stack_b, int *cost_b)
+{
+	if (*cost_a > 0 && *cost_b > 0)
+	{
+		while (*cost_a > 0 && *cost_b > 0)
+		{
+			rr(stack_a, stack_b);
+			(*cost_a)--;
+			(*cost_b)--;
+		}
+	}
+	if (*cost_a < 0 && *cost_b < 0)
+	{
+		while (*cost_a < 0 && *cost_b < 0)
+		{
+			rrr(stack_a, stack_b);
+			(*cost_a)++;
+			(*cost_b)++;
+		}
+	}
+}
+
 void	solve_cost_a(t_node **stack_a, int cost_a)
 {
 	int	i;
