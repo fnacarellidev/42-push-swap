@@ -12,15 +12,9 @@ FILES = push_swap_movements/swap_operations \
 		ft_latoi \
 		param_parsing \
 		sort_three \
-		sort_five \
-		sort_four \
-		get_val \
 		ft_utils00 \
 		sort \
-		sort_big \
-		set_target_pos \
 		calculate_costs \
-		ft_abs \
 		perform_costs
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
