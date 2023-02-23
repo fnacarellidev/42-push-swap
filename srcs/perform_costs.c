@@ -6,12 +6,13 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 01:36:08 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/14 12:53:27 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 20:09:13 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
 void	perform_cost_a(t_node **stack_a, int cost_a)
+static int	ft_abs(int i)
 {
 	int	i;
 
@@ -32,6 +33,9 @@ void	perform_cost_a(t_node **stack_a, int cost_a)
 			i++;
 		}
 	}
+	if (i < 0)
+		return (-i);
+	return (i);
 }
 
 void	perform_cost_b(t_node **stack_b, int cost_b)
