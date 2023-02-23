@@ -6,10 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:11:35 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/27 18:49:45 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:42:55 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	swap_first_two_nodes(t_node **head)
 {

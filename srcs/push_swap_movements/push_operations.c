@@ -6,10 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:48:04 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/13 21:44:16 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:42:34 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static int	list_is_empty(int elements)
 {
