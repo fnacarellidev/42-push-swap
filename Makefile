@@ -1,12 +1,12 @@
 NAME = push_swap
 FLAGS = -Wall -Wextra -Werror -g3
-FILES = node_operations \
+FILES = push_swap_movements/swap_operations \
+		push_swap_movements/push_operations \
+		push_swap_movements/rotate_operations \
+		push_swap_movements/reverse_rotate_operations \
+		node_operations \
 		init_stacks \
 		ft_atoi \
-		swap_operations \
-		push_operations \
-		rotate_operations \
-		reverse_rotate_operations \
 		eval_input \
 		is_sorted \
 		ft_latoi \
