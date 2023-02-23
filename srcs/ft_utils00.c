@@ -6,25 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:11:58 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/10 19:16:56 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:34:36 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
-
-void	free_list(t_node **head)
-{
-	int	i;
-	int	elements;
-
-	i = 0;
-	elements = list_len(head);
-	while (i < elements)
-	{
-		del_last_node(head);
-		i++;
-	}
-	free(head);
-}
 
 int	matr_len(void **matrix)
 {
