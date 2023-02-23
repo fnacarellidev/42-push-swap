@@ -10,7 +10,7 @@ FILES = push_swap_movements/swap_operations \
 		eval_input \
 		is_sorted \
 		ft_latoi \
-		ft_atoi_utils \
+		param_parsing \
 		sort_three \
 		sort_five \
 		sort_four \
