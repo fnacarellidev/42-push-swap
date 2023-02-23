@@ -6,12 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:28:28 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/27 18:48:44 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 20:14:51 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-void	rev_rotate_a(t_node **stack_a)
+void	rev_rotate_a(t_node **stack_a, int called_from_rrr)
 {
 	t_node	*tmp;
 	int		elements;
@@ -30,10 +30,11 @@ void	rev_rotate_a(t_node **stack_a)
 	last_node = tmp->next;
 	tmp->next = NULL;
 	node_add_front(stack_a, last_node);
-	write(1, "rra\n", 4);
+	if (!called_from_rrr)
+		write(1, "rra\n", 4);
 }
 
-void	rev_rotate_b(t_node **stack_b)
+void	rev_rotate_b(t_node **stack_b, int called_from_rrr)
 {
 	t_node	*tmp;
 	int		elements;
@@ -52,12 +53,13 @@ void	rev_rotate_b(t_node **stack_b)
 	last_node = tmp->next;
 	tmp->next = NULL;
 	node_add_front(stack_b, last_node);
-	write(1, "rrb\n", 4);
+	if (!called_from_rrr)
+		write(1, "rrb\n", 4);
 }
 
 void	rrr(t_node **stack_a, t_node **stack_b)
 {
-	rev_rotate_a(stack_a);
-	rev_rotate_b(stack_b);
+	rev_rotate_a(stack_a, 1);
+	rev_rotate_b(stack_b, 1);
 	write(1, "rrr\n", 4);
 }
