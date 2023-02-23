@@ -11,52 +11,17 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-void	perform_cost_a(t_node **stack_a, int cost_a)
 static int	ft_abs(int i)
 {
-	int	i;
-
-	i = cost_a;
-	if (cost_a > 0)
-	{
-		while (i > 0)
-		{
-			rotate_a(stack_a);
-			i--;
-		}
-	}
-	else
-	{
-		while (i < 0)
-		{
-			rev_rotate_a(stack_a);
-			i++;
-		}
-	}
 	if (i < 0)
 		return (-i);
 	return (i);
 }
 
-void	perform_cost_b(t_node **stack_b, int cost_b)
 {
-	int	i;
 
-	i = cost_b;
-	if (cost_b > 0)
 	{
-		while (i > 0)
 		{
-			rotate_b(stack_b);
-			i--;
-		}
-	}
-	else
-	{
-		while (i < 0)
-		{
-			rev_rotate_b(stack_b);
-			i++;
 		}
 	}
 }
