@@ -30,8 +30,6 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	clang $(FLAGS) main.c $(OBJS) -o $(NAME)
 
-$(OBJS) : $(SRCS)
-
 %.o : %.c
 	clang $(FLAGS) -I ./ -c $< -o $@
 
