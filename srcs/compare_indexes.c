@@ -21,3 +21,14 @@ int		have_smaller_idx(int idx, t_node *stack)
 	}
 	return (0);
 }
+
+int		have_bigger_idx(int idx, t_node *stack)
+{
+	while (stack != NULL)
+	{
+		if (stack->idx > idx)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
+}
