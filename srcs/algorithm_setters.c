@@ -6,12 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 22:58:13 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/14 10:40:39 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:24:43 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int			get_highest_idx(t_node *stack_a)
+int	get_highest_idx(t_node *stack_a)
 {
 	int	highest;
 
@@ -54,5 +54,38 @@ void	set_target_pos(t_node **stack_a, t_node *stack_b)
 			head = head->next;
 		tmp->target_pos = head->curr_pos;
 		tmp = tmp->next;
+	}
+}
+
+void	set_costs(t_node *stack_a, t_node *stack_b)
+{
+	t_node	*tmp;
+
+	tmp = stack_b;
+	while (tmp != NULL)
+	{
+		tmp->cost_a = calc_cost_a(stack_a, tmp);
+		tmp->cost_b = calc_cost_b(stack_b, tmp);
+		tmp = tmp->next;
+	}
+}
+
+void	set_positions(t_node *stack_a, t_node *stack_b)
+{
+	int	i;
+
+	i = 0;
+	while (stack_a != NULL)
+	{
+		stack_a->curr_pos = i;
+		i++;
+		stack_a = stack_a->next;
+	}
+	i = 0;
+	while (stack_b != NULL)
+	{
+		stack_b->curr_pos = i;
+		i++;
+		stack_b = stack_b->next;
 	}
 }
