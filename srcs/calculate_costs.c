@@ -6,12 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 23:44:40 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/14 05:01:15 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:22:52 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static int	calc_cost_a(t_node *stack_a, t_node *node_b)
+int	calc_cost_a(t_node *stack_a, t_node *node_b)
 {
 	int	size_stack_a;
 
@@ -21,7 +21,7 @@ static int	calc_cost_a(t_node *stack_a, t_node *node_b)
 	return (node_b->target_pos - size_stack_a);
 }
 
-static int	calc_cost_b(t_node *stack_b, t_node *node_b)
+int	calc_cost_b(t_node *stack_b, t_node *node_b)
 {
 	int	size_stack_b;
 
