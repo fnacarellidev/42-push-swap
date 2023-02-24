@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 12:48:43 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 13:01:32 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -18,7 +18,7 @@ static int	*atoi_argv(char **argv)
 	int	spaces_to_alloc;
 
 	i = 1;
-	spaces_to_alloc = matr_len((void **)argv) - 1;
+	spaces_to_alloc = matrix_len((void **)argv) - 1;
 	ptr = malloc(sizeof(int) * spaces_to_alloc);
 	while (argv[i])
 	{
@@ -80,7 +80,7 @@ static int	has_duplicate(char **argv)
 
 	i = 1;
 	ptr = atoi_argv(argv);
-	size = matr_len((void **)argv) - 1;
+	size = matrix_len((void **)argv) - 1;
 	while (i < size)
 	{
 		j = 0;
