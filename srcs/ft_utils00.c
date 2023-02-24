@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:11:58 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 19:34:36 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:48:46 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -41,21 +41,4 @@ int	ft_power(int base, int exponent)
 	if (exponent == 1)
 		return (base);
 	return (base * ft_power(base, exponent - 1));
-}
-
-int	*atoi_argv(char **argv)
-{
-	int	i;
-	int	*ptr;
-	int	spaces_to_alloc;
-
-	i = 1;
-	spaces_to_alloc = matr_len((void **)argv) - 1;
-	ptr = malloc(sizeof(int) * spaces_to_alloc);
-	while (argv[i])
-	{
-		ptr[i - 1] = ft_atoi(argv[i]);
-		i++;
-	}
-	return (ptr);
 }

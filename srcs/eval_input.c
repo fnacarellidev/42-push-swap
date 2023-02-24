@@ -11,7 +11,21 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+static int	*atoi_argv(char **argv)
 {
+	int	i;
+	int	*ptr;
+	int	spaces_to_alloc;
+
+	i = 1;
+	spaces_to_alloc = matr_len((void **)argv) - 1;
+	ptr = malloc(sizeof(int) * spaces_to_alloc);
+	while (argv[i])
+	{
+		ptr[i - 1] = ft_atoi(argv[i]);
+		i++;
+	}
+	return (ptr);
 }
 
 static int	is_in_int_range(char **argv)
