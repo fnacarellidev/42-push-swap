@@ -6,10 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:21:29 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 15:38:45 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 11:11:40 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+int	ft_issign(char c);
+int	ft_isnumber(char c);
+int	ft_isspace(char c);
 
 int	ft_atoi(const char *nptr)
 {
