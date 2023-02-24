@@ -6,7 +6,6 @@ FILES = push_swap_movements/swap_operations \
 		push_swap_movements/reverse_rotate_operations \
 		utils/matrix_len \
 		utils/ft_power \
-		utils/ft_utils00 \
 		node_operations \
 		init_stacks \
 		ft_atoi \
