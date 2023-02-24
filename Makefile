@@ -6,6 +6,7 @@ FILES = push_swap_movements/swap_operations \
 		push_swap_movements/reverse_rotate_operations \
 		utils/matrix_len \
 		utils/ft_power \
+		utils/have_smaller_idx \
 		node_operations \
 		init_stacks \
 		ft_atoi \
@@ -17,7 +18,6 @@ FILES = push_swap_movements/swap_operations \
 		algorithm_setters \
 		calculate_costs \
 		perform_costs \
-		compare_indexes \
 		rearrange_stack \
 		solve_costs
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
