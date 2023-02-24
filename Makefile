@@ -11,7 +11,6 @@ FILES = push_swap_movements/swap_operations \
 		is_sorted \
 		ft_latoi \
 		param_parsing \
-		sort_three \
 		ft_utils00 \
 		sort \
 		algorithm_setters \
