@@ -4,6 +4,9 @@ FILES = push_swap_movements/swap_operations \
 		push_swap_movements/push_operations \
 		push_swap_movements/rotate_operations \
 		push_swap_movements/reverse_rotate_operations \
+		utils/matrix_len \
+		utils/ft_power \
+		utils/ft_utils00 \
 		node_operations \
 		init_stacks \
 		ft_atoi \
@@ -11,7 +14,6 @@ FILES = push_swap_movements/swap_operations \
 		is_sorted \
 		ft_latoi \
 		param_parsing \
-		ft_utils00 \
 		sort \
 		algorithm_setters \
 		calculate_costs \
