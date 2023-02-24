@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:09:52 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 17:45:30 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 20:09:13 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	eval_input(argc, argv);
-	init_stacks(&stack_a, &stack_b, argc, argv);
+	set_stacks(&stack_a, &stack_b, argc, argv);
 	if (!is_sorted(*stack_a))
 		sort(stack_a, stack_b, list_len(stack_a));
 	free_list(stack_a);
