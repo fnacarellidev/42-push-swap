@@ -54,6 +54,7 @@ void		del_last_node(t_node **head);
 void		del_first_node(t_node **head);
 void		rev_rotate_a(t_node **stack_a, int called_from_rrr);
 void		rev_rotate_b(t_node **stack_b, int called_from_rrr);
+void		rearrange_stack(t_node **stack);
 void		eval_input(int argc, char **argv);
 void		ss(t_node **stack_a, t_node **stack_b);
 void		rr(t_node **stack_a, t_node **stack_b);
