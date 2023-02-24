@@ -6,10 +6,10 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:53:51 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/26 15:01:33 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 14:44:02 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	is_sorted(t_node *stack)
 {
