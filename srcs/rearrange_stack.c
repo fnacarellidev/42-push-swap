@@ -30,6 +30,20 @@ static void	fix_rotating_up(t_node **stack, int smallest_idx_pos)
 	}
 }
 
+static void	fix_rotating_down(t_node **stack, int smallest_idx_pos)
+{
+	int	i;
+	int	stack_size;
+
+	i = 0;
+	stack_size = list_len(stack);
+	while (i < stack_size - smallest_idx_pos)
+	{
+		rev_rotate_a(stack, 0);
+		i++;
+	}
+}
+
 void	rearrange_stack(t_node **stack)
 {
 	int	i;
