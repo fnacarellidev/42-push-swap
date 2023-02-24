@@ -8,12 +8,15 @@ FILES = push_swap_movements/swap_operations \
 		utils/ft_power \
 		utils/have_smaller_idx \
 		utils/is_sorted \
+		utils/ft_isnumber \
+		utils/ft_issign \
+		utils/ft_isspace \
+		utils/ft_has_only_sign \
 		linked_list_utils \
 		init_stacks \
 		ft_atoi \
 		eval_input \
 		ft_latoi \
-		param_parsing \
 		sort \
 		sort_five \
 		algorithm_setters \
