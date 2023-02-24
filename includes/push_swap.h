@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 21:07:29 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 11:21:07 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -29,7 +29,6 @@ typedef struct s_node
 t_node		*new_node(int data);
 int			ft_issign(char c);
 int			ft_isspace(char c);
-int			ft_isnumber(char c);
 int			matr_len(void **matrix);
 int			list_len(t_node **head);
 int			*atoi_argv(char **argv);
