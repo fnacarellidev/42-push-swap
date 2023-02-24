@@ -6,10 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 13:01:32 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 14:11:29 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
+
+long int	ft_latoi(const char *nptr);
 
 static int	*atoi_argv(char **argv)
 {
