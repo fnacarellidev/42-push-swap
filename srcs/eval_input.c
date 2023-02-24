@@ -6,16 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/10 19:18:30 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:48:43 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static int	has_input(int argc)
 {
-	if (argc < 2)
-		return (0);
-	return (1);
 }
 
 static int	is_in_int_range(char **argv)
@@ -91,7 +87,7 @@ static int	has_duplicate(char **argv)
 
 void	eval_input(int argc, char **argv)
 {
-	if (!has_input(argc))
+	if (argc < 2)
 	{
 		write(1, "Error\n", 6);
 		exit(1);
