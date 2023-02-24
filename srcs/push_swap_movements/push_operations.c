@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 22:48:04 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 19:42:34 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:40:31 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../../includes/push_swap.h"
@@ -25,10 +25,7 @@ void	push_a(t_node **stack_a, t_node **stack_b)
 
 	elements = list_len(stack_b);
 	if (list_is_empty(elements))
-	{
-		write(1, "Can't push_a, stack_b is empty.\n", 32);
 		return ;
-	}
 	copy = new_node((*stack_b)->data);
 	copy->idx = (*stack_b)->idx;
 	del_first_node(stack_b);
@@ -43,10 +40,7 @@ void	push_b(t_node **stack_a, t_node **stack_b)
 
 	elements = list_len(stack_a);
 	if (list_is_empty(elements))
-	{
-		write(1, "Can't push_b, stack_a is empty.\n", 32);
 		return ;
-	}
 	copy = new_node((*stack_a)->data);
 	copy->idx = (*stack_a)->idx;
 	del_first_node(stack_a);
