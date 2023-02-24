@@ -55,17 +55,7 @@ void	rearrange_stack(t_node **stack)
 	smallest_idx_pos = smallest_idx_current_position(*stack);
 	list_size = list_len(stack);
 	if (smallest_idx_pos <= list_size / 2)
-	{
-		while (i < smallest_idx_pos)
-		{
-			rotate_a(stack, 0);
-			i++;
-		}
-	}
+		fix_rotating_up(stack, smallest_idx_pos);
 	else
-		while (i < list_size - smallest_idx_pos)
-		{
-			rev_rotate_a(stack, 0);
-			i++;
-		}
+		fix_rotating_down(stack, smallest_idx_pos);
 }
