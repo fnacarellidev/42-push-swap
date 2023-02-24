@@ -46,7 +46,6 @@ void		sort_five(t_node **stack_a, t_node **stack_b);
 void		rotate_a(t_node **stack_a, int called_from_rr);
 void		rotate_b(t_node **stack_b, int called_from_rr);
 void		sort_three(t_node **stack);
-void		del_last_node(t_node **head);
 void		del_first_node(t_node **head);
 void		rev_rotate_a(t_node **stack_a, int called_from_rrr);
 void		rev_rotate_b(t_node **stack_b, int called_from_rrr);
