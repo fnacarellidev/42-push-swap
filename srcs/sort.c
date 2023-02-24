@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:19:59 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 20:16:24 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:23:13 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -83,6 +83,8 @@ void	sort(t_node **stack_a, t_node **stack_b, int size_a)
 		swap_a(stack_a);
 	else if (size_a == 3)
 		sort_three(stack_a);
+	else if (size_a == 5)
+		sort_five(stack_a, stack_b);
 	else
 		sort_big(stack_a, stack_b);
 }
