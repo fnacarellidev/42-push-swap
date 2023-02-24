@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:10:52 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 16:20:13 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:19:41 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -38,6 +38,7 @@ void	sort_five(t_node **stack_a, t_node **stack_b)
 		else
 			rotate_a(stack_a, 0);
 	}
-	sort_three(stack_a);
+	if (!is_sorted(*stack_a))
+		sort_three(stack_a);
 	fix_five(stack_a, stack_b);
 }
