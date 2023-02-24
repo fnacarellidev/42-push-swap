@@ -23,14 +23,15 @@ FILES = push_swap_movements/swap_operations \
 		calculate_costs \
 		perform_costs \
 		rearrange_stack \
-		solve_costs
+		solve_costs \
+		push_swap
 SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	clang $(FLAGS) main.c $(OBJS) -o $(NAME)
+	clang $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o : %.c
 	clang $(FLAGS) -I ./ -c $< -o $@
