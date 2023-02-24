@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 01:36:08 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 20:09:13 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:09:35 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -18,7 +18,7 @@ static int	ft_abs(int i)
 	return (i);
 }
 
-int		get_position_with_cheapest_cost(t_node *stack_b)
+int	get_position_with_cheapest_cost(t_node *stack_b)
 {
 	int	cheapest_cost;
 	int	cost_to_compare;
