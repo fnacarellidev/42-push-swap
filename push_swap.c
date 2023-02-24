@@ -50,3 +50,18 @@ void	free_list(t_node **head)
 	}
 	free(head);
 }
+
+int	main(int argc, char **argv)
+{
+	t_node	**stack_a;
+	t_node	**stack_b;
+
+	if (argc < 2)
+		return (1);
+	eval_input(argc, argv);
+	init_stacks(&stack_a, &stack_b, argc, argv);
+	if (!is_sorted(*stack_a))
+		sort(stack_a, stack_b, list_len(stack_a));
+	free_list(stack_a);
+	free_list(stack_b);
+}
