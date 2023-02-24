@@ -66,8 +66,8 @@ void		set_positions(t_node *stack_a, t_node *stack_b);
 void		set_target_pos(t_node **stack_a, t_node *node_b);
 void		sort(t_node **stack_a, t_node **stack_b, int size_a);
 void		perform_cheapest_action(t_node **stack_a, t_node **stack_b);
-void		init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
 void		solve_both(t_node **stk_a, int *acost, t_node **stk_b, int *bcost);
+void		set_stacks(t_node ***stk_a, t_node ***stk_b, int argc, char **argv);
 long int	ft_latoi(const char *nptr);
 
 #endif
