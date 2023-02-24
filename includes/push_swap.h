@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 11:21:07 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 11:25:15 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -38,8 +38,6 @@ int			ft_has_only_sign(char *str);
 int			get_max_val(t_node **stack, int idx);
 int			get_min_val(t_node **stack, int idx);
 int			ft_power(int base, int exponent);
-int			get_min_val_index(t_node **stack);
-int			get_max_val_index(t_node **stack);
 int			have_bigger_idx(int idx, t_node *stack);
 int			have_smaller_idx(int idx, t_node *stack);
 int			calc_cost_a(t_node *stack_a, t_node *node_b);
