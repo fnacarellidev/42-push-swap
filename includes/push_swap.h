@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 13:35:42 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 14:12:34 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -67,6 +67,5 @@ void		sort(t_node **stack_a, t_node **stack_b, int size_a);
 void		perform_cheapest_action(t_node **stack_a, t_node **stack_b);
 void		solve_both(t_node **stack_a, int *cost_a, t_node **stack_b, int *cost_b);
 void		init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv);
-long int	ft_latoi(const char *nptr);
 
 #endif
