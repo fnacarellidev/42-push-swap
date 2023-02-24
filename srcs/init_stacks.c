@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:18:45 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 19:59:44 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 20:05:11 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -42,23 +42,23 @@ static void	set_stack_indexes(t_node **stack_a)
 	}
 }
 
-void	init_stacks(t_node ***stack_a, t_node ***stack_b, int argc, char **argv)
+void	set_stacks(t_node ***stk_a, t_node ***stk_b, int argc, char **argv)
 {
 	int		i;
 	int		data;
 	t_node	*node;
 
 	i = 1;
-	*stack_b = malloc(sizeof(t_node *));
-	*stack_a = malloc(sizeof(t_node *));
-	**stack_a = NULL;
-	**stack_b = NULL;
+	*stk_b = malloc(sizeof(t_node *));
+	*stk_a = malloc(sizeof(t_node *));
+	**stk_a = NULL;
+	**stk_b = NULL;
 	while (i < argc)
 	{
 		data = ft_atoi(argv[i]);
 		node = new_node(data);
-		node_add_back(*stack_a, node);
+		node_add_back(*stk_a, node);
 		i++;
 	}
-	set_stack_indexes(*stack_a);
+	set_stack_indexes(*stk_a);
 }
