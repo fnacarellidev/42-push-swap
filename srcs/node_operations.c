@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:54:35 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/01/19 18:57:31 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 13:03:50 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -58,31 +58,6 @@ void	del_first_node(t_node **head)
 		{
 			*head = (*head)->next;
 			free(tmp);
-		}
-	}
-}
-
-void	del_last_node(t_node **head)
-{
-	t_node	*tmp;
-
-	tmp = *head;
-	if (head)
-	{
-		if (*head != NULL)
-		{
-			if (tmp->next == NULL)
-			{
-				free(tmp);
-				*head = NULL;
-			}
-			else
-			{
-				while (tmp->next->next != NULL)
-					tmp = tmp->next;
-				free(tmp->next);
-				tmp->next = NULL;
-			}
 		}
 	}
 }
