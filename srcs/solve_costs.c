@@ -6,29 +6,29 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 19:49:27 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 20:15:50 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 20:08:47 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-void	solve_both(t_node **stack_a, int *cost_a, t_node **stack_b, int *cost_b)
+void	solve_both(t_node **stk_a, int *acost, t_node **stk_b, int *bcost)
 {
-	if (*cost_a > 0 && *cost_b > 0)
+	if (*acost > 0 && *bcost > 0)
 	{
-		while (*cost_a > 0 && *cost_b > 0)
+		while (*acost > 0 && *bcost > 0)
 		{
-			rr(stack_a, stack_b);
-			(*cost_a)--;
-			(*cost_b)--;
+			rr(stk_a, stk_b);
+			(*acost)--;
+			(*bcost)--;
 		}
 	}
-	if (*cost_a < 0 && *cost_b < 0)
+	if (*acost < 0 && *bcost < 0)
 	{
-		while (*cost_a < 0 && *cost_b < 0)
+		while (*acost < 0 && *bcost < 0)
 		{
-			rrr(stack_a, stack_b);
-			(*cost_a)++;
-			(*cost_b)++;
+			rrr(stk_a, stk_b);
+			(*acost)++;
+			(*bcost)++;
 		}
 	}
 }
