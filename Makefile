@@ -7,11 +7,11 @@ FILES = push_swap_movements/swap_operations \
 		utils/matrix_len \
 		utils/ft_power \
 		utils/have_smaller_idx \
+		utils/is_sorted \
 		node_operations \
 		init_stacks \
 		ft_atoi \
 		eval_input \
-		is_sorted \
 		ft_latoi \
 		param_parsing \
 		sort \
