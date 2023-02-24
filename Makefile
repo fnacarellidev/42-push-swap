@@ -13,7 +13,7 @@ FILES = push_swap_movements/swap_operations \
 		utils/ft_isspace \
 		utils/ft_has_only_sign \
 		linked_list_utils \
-		init_stacks \
+		set_stacks \
 		ft_atoi \
 		eval_input \
 		ft_latoi \
