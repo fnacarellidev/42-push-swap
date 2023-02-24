@@ -15,6 +15,7 @@ FILES = push_swap_movements/swap_operations \
 		ft_latoi \
 		param_parsing \
 		sort \
+		sort_five \
 		algorithm_setters \
 		calculate_costs \
 		perform_costs \
