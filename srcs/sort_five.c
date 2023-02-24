@@ -6,12 +6,12 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:10:52 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 16:01:15 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:20:13 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-static void     fix_five(t_node **stack_a, t_node **stack_b)
+static void	fix_five(t_node **stack_a, t_node **stack_b)
 {
 	push_a(stack_a, stack_b);
 	push_a(stack_a, stack_b);
@@ -24,10 +24,10 @@ static void     fix_five(t_node **stack_a, t_node **stack_b)
 	}
 }
 
-void    sort_five(t_node **stack_a, t_node **stack_b)
+void	sort_five(t_node **stack_a, t_node **stack_b)
 {
-	int     min_idx;
-	int     max_idx;
+	int		min_idx;
+	int		max_idx;
 
 	min_idx = 1;
 	max_idx = 5;
