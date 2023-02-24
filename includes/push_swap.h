@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/23 21:03:15 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/23 21:07:29 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -43,6 +43,8 @@ int			get_min_val_index(t_node **stack);
 int			get_max_val_index(t_node **stack);
 int			have_bigger_idx(int idx, t_node *stack);
 int			have_smaller_idx(int idx, t_node *stack);
+int			calc_cost_a(t_node *stack_a, t_node *node_b);
+int			calc_cost_b(t_node *stack_a, t_node *node_b);
 int			get_position_with_cheapest_cost(t_node *stack_b);
 void		swap_a(t_node **stack_a);
 void		swap_b(t_node **stack_b);
