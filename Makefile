@@ -8,7 +8,7 @@ FILES = push_swap_movements/swap_operations \
 		utils/ft_power \
 		utils/have_smaller_idx \
 		utils/is_sorted \
-		node_operations \
+		linked_list_utils \
 		init_stacks \
 		ft_atoi \
 		eval_input \
