@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:22:07 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 16:15:00 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:44:40 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -46,11 +46,9 @@ static void	fix_rotating_down(t_node **stack, int smallest_idx_pos)
 
 void	rearrange_stack(t_node **stack)
 {
-	int	i;
 	int	list_size;
 	int	smallest_idx_pos;
 
-	i = 0;
 	set_positions(*stack, NULL);
 	smallest_idx_pos = smallest_idx_current_position(*stack);
 	list_size = list_len(stack);
