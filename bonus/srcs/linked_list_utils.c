@@ -53,3 +53,18 @@ static void	del_last_node(t_node **head)
 		}
 	}
 }
+
+void	free_list(t_node **head)
+{
+	int	i;
+	int	elements;
+
+	i = 0;
+	elements = list_len(head);
+	while (i < elements)
+	{
+		del_last_node(head);
+		i++;
+	}
+	free(head);
+}
