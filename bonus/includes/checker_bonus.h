@@ -21,4 +21,5 @@ typedef struct s_node
 }	t_node;
 
 int		ft_strlen(char *str);
+int		list_len(t_node **head);
 #endif
