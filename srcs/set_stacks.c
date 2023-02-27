@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 19:18:45 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 20:05:11 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/27 10:59:57 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -49,8 +49,8 @@ void	set_stacks(t_node ***stk_a, t_node ***stk_b, int argc, char **argv)
 	t_node	*node;
 
 	i = 1;
-	*stk_b = malloc(sizeof(t_node *));
 	*stk_a = malloc(sizeof(t_node *));
+	*stk_b = malloc(sizeof(t_node *));
 	**stk_a = NULL;
 	**stk_b = NULL;
 	while (i < argc)
