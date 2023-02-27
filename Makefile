@@ -29,7 +29,7 @@ FILES = push_swap_movements/swap_operations \
 SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
-BONUSFILES = checker
+BONUSFILES = checker_bonus
 BONUSSRCS = $(addsuffix .c, $(addprefix bonus/srcs/, $(BONUSFILES)))
 BONUSOBJS = $(BONUSSRCS:%.c=%.o)
 
