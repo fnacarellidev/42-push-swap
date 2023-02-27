@@ -49,6 +49,19 @@ void	init_valid_operations(char ***valid_operations)
 
 int main(void)
 {
-	printf("Hello World\n");
+	char 	buf[4];
+	char	**valid_operations;
+
+	init_valid_operations(&valid_operations);
+	while (read(1, buf, 4))
+	{
+		if (!is_valid_operation(buf, valid_operations))
+		{
+			write(1, "Error\n", 6);
+			break ;
+		}
+		ft_bzero(buf);
+	}
+	ft_free_matrix((void**)valid_operations);
 	return (0);
 }
