@@ -30,10 +30,21 @@ SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
 BONUSFILES =	utils/ft_bzero_bonus \
+				utils/ft_matrix_len_bonus \
 				utils/ft_free_matrix_bonus \
 				utils/ft_strdup_bonus \
 				utils/ft_strlen_bonus \
 				utils/ft_strncmp_bonus \
+				utils/ft_has_only_space_bonus \
+				utils/ft_issign_bonus \
+				utils/ft_isnumber_bonus \
+				utils/ft_isspace_bonus \
+				utils/ft_power_bonus \
+				utils/ft_is_sorted_bonus \
+				ft_atoi_bonus \
+				ft_latoi_bonus \
+				eval_input_bonus \
+				linked_list_utils_bonus \
 				checker_bonus
 BONUSSRCS = $(addsuffix .c, $(addprefix bonus/srcs/, $(BONUSFILES)))
 BONUSOBJS = $(BONUSSRCS:%.c=%.o)
