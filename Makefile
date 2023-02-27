@@ -25,7 +25,7 @@ FILES = push_swap_movements/swap_operations \
 		rearrange_stack \
 		solve_costs \
 		push_swap
-SRCS = $(addsuffix .c, $(addprefix srcs/, $(FILES)))
+SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
 all : $(NAME)
