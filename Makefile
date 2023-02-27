@@ -45,7 +45,7 @@ bonus : $(BONUSOBJS)
 	clang $(FLAGS) -I ./ -c $< -o $@
 
 clean :
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BONUSOBJS)
 
 fclean :
 	rm -rf $(OBJS) $(NAME)
