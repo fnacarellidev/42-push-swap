@@ -28,3 +28,28 @@ int	list_len(t_node **head)
 	}
 	return (count);
 }
+
+static void	del_last_node(t_node **head)
+{
+	t_node	*tmp;
+
+	tmp = *head;
+	if (head)
+	{
+		if (*head != NULL)
+		{
+			if (tmp->next == NULL)
+			{
+				free(tmp);
+				*head = NULL;
+			}
+			else
+			{
+				while (tmp->next->next != NULL)
+					tmp = tmp->next;
+				free(tmp->next);
+				tmp->next = NULL;
+			}
+		}
+	}
+}
