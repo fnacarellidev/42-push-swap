@@ -30,6 +30,7 @@ SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
 BONUSFILES =	utils/ft_bzero_bonus \
+				utils/ft_free_matrix_bonus \
 				checker_bonus
 BONUSSRCS = $(addsuffix .c, $(addprefix bonus/srcs/, $(BONUSFILES)))
 BONUSOBJS = $(BONUSSRCS:%.c=%.o)
