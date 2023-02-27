@@ -23,4 +23,6 @@ typedef struct s_node
 int		ft_strlen(char *str);
 int		list_len(t_node **head);
 int		ft_strncmp(char *s1, char *s2, int n);
+void	ft_bzero(char buf[4]);
+
 #endif
