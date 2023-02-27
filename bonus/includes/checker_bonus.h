@@ -25,5 +25,6 @@ int		list_len(t_node **head);
 int		ft_strncmp(char *s1, char *s2, int n);
 void	ft_bzero(char buf[4]);
 void	free_list(t_node **head);
+void	ft_free_matrix(void **matrix);
 
 #endif
