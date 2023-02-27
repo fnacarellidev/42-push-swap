@@ -47,7 +47,7 @@ bonus : $(BONUSOBJS)
 clean :
 	rm -rf $(OBJS) $(BONUSOBJS)
 
-fclean :
-	rm -rf $(OBJS) $(NAME)
+fclean : clean
+	rm -rf $(NAME) $(NAMEBONUS)
 
 re : fclean all
