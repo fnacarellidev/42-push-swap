@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:19:59 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 15:23:13 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:07:42 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -47,7 +47,7 @@ static void	which_move_to_do(t_node **stack, int idx1, int idx2, int idx3)
 		rotate_a(stack, 0);
 }
 
-void	sort_big(t_node **stack_a, t_node **stack_b)
+static void	sort_big(t_node **stack_a, t_node **stack_b)
 {
 	t_node	*tmp;
 
