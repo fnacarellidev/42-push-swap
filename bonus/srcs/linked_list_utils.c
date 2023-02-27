@@ -68,3 +68,21 @@ void	free_list(t_node **head)
 	}
 	free(head);
 }
+
+void	node_add_back(t_node **head, t_node *node)
+{
+	t_node	*tmp;
+
+	tmp = *head;
+	if (head && node)
+	{
+		if (*head == NULL)
+			*head = node;
+		else
+		{
+			while (tmp->next != NULL)
+				tmp = tmp->next;
+			tmp->next = node;
+		}
+	}
+}
