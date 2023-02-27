@@ -1,4 +1,5 @@
 NAME = push_swap
+NAMEBONUS = checker
 FLAGS = -Wall -Wextra -Werror -g3
 FILES = push_swap_movements/swap_operations \
 		push_swap_movements/push_operations \
@@ -28,10 +29,17 @@ FILES = push_swap_movements/swap_operations \
 SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
+BONUSFILES = checker
+BONUSSRCS = $(addsuffix .c, $(addprefix bonus/srcs/, $(BONUSFILES)))
+BONUSOBJS = $(BONUSSRCS:%.c=%.o)
+
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	clang $(FLAGS) $(OBJS) -o $(NAME)
+
+bonus : $(BONUSOBJS)
+	clang $(FLAGS) $(BONUSOBJS) -o $(NAMEBONUS)
 
 %.o : %.c
 	clang $(FLAGS) -I ./ -c $< -o $@
