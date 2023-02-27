@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:13:21 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/24 20:07:29 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:10:49 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -61,7 +61,6 @@ void		solve_cost_a(t_node **stack_a, int cost_a);
 void		solve_cost_b(t_node **stack_a, int cost_a);
 void		node_add_front(t_node **head, t_node *node);
 void		set_costs(t_node *stack_a, t_node *stack_b);
-void		sort_big(t_node **stack_a, t_node **stack_b);
 void		set_positions(t_node *stack_a, t_node *stack_b);
 void		set_target_pos(t_node **stack_a, t_node *node_b);
 void		sort(t_node **stack_a, t_node **stack_b, int size_a);
