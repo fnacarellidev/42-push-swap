@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:19:59 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 11:07:42 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:15:42 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -49,16 +49,13 @@ static void	which_move_to_do(t_node **stack, int idx1, int idx2, int idx3)
 
 static void	sort_big(t_node **stack_a, t_node **stack_b)
 {
-	t_node	*tmp;
-
 	transfer_to_b(stack_a, stack_b);
 	if (!is_sorted(*stack_a))
 		sort_three(stack_a);
 	while (list_len(stack_b) != 0)
 	{
-		tmp = *stack_b;
 		set_positions(*stack_a, *stack_b);
-		set_target_pos(stack_a, tmp);
+		set_target_pos(stack_a, *stack_b);
 		set_costs(*stack_a, *stack_b);
 		perform_cheapest_action(stack_a, stack_b);
 	}
