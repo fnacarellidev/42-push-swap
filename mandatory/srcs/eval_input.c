@@ -59,13 +59,18 @@ static int	has_non_integer(char **argv)
 		if (ft_has_only_space(argv[i]))
 			return (1);
 		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			if ((argv[i][j] < 48 || argv[i][j] > 57) && !ft_issign(argv[i][j])
-					&& !ft_isspace(argv[i][j]))
-				return (1);
+		while (argv[i][j] == ' ')
 			j++;
-		}
+		if ((argv[i][j] == '-' || argv[i][j] == '+') && !ft_isnumber(argv[i][j + 1]))
+			return (1);
+		if (argv[i][j] == '-' || argv[i][j] == '+')
+			j++;
+		while (ft_isnumber(argv[i][j]))
+			j++;
+		while (argv[i][j] == ' ')
+			j++;
+		if (argv[i][j] != '\0')
+			return (1);
 		i++;
 	}
 	return (0);
