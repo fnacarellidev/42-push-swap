@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:35:48 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 17:14:13 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:30:26 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
@@ -47,11 +47,12 @@ void	init_valid_operations(char ***valid_operations)
 	(*valid_operations)[11] = NULL;
 }
 
-int main(void)
+int	main(int argc, char **argv)
 {
 	char 	buf[4];
 	char	**valid_operations;
 
+	eval_input(argc, argv);
 	init_valid_operations(&valid_operations);
 	while (read(1, buf, 4))
 	{
