@@ -53,7 +53,10 @@ BONUSFILES =	utils/ft_bzero_bonus \
 				ft_atoi_bonus \
 				ft_latoi_bonus \
 				eval_input_bonus \
-				checker_bonus
+				checker_bonus \
+				set_stacks_bonus \
+				valid_operations \
+				run_operations
 
 GNLFILES =	get_next_line/get_next_line \
 			get_next_line/get_next_line_utils
