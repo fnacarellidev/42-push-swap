@@ -46,6 +46,14 @@ BONUSFILES =	utils/ft_bzero_bonus \
 				eval_input_bonus \
 				linked_list_utils_bonus \
 				checker_bonus
+
+GNLFILES =	get_next_line/get_next_line \
+			get_next_line/get_next_line_utils
+
+GNLLIB =	$(addprefix bonus/srcs/, get_next_line/gnl.a)
+
+GNLSRCS =	$(addsuffix .c, $(addprefix bonus/srcs/, $(GNLFILES)))
+GNLOBJS =	$(GNLSRCS:%.c=%.o)
 BONUSSRCS = $(addsuffix .c, $(addprefix bonus/srcs/, $(BONUSFILES)))
 BONUSOBJS = $(BONUSSRCS:%.c=%.o)
 
