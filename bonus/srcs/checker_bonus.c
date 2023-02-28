@@ -38,25 +38,28 @@ char	*eval_oper(t_opers **operations, char **valid_operations, t_wrap *wrap)
 	return (NULL);
 }
 
+void	checker(t_opers ***opers, char **std_opers, t_node **s_a, t_node **s_b)
 {
-void	checker(t_node ***operations, char **valid_operations)
-{
-	t_node	*node;
-	t_wrap	wrapper;
-	char	*stdin_instruction;
+	t_wrap		wrap;
+	t_opers		*node;
+	char		*stdin_instruction;
 
-	wrapper.node_ptr = *operations;
-	wrapper.valid_ops_ptr = valid_operations;
+	wrap.stack_a = s_a;
+	wrap.stack_b = s_b;
 	while (1)
 	{
-		stdin_instruction = get_stdin_instruction(*operations, valid_operations);
-		wrapper.instruct_op = stdin_instruction;
+		stdin_instruction = eval_oper(*opers, std_opers, &wrap);
 		if (stdin_instruction == NULL)
-			close_program(&wrapper);
-		node = new_node(stdin_instruction);
-		node_add_back(*operations, node);
+			break ;
+		node = oper_new_node(stdin_instruction);
+		node_add_back_oper(*opers, node);
 		free(stdin_instruction);
 	}
+	run_opers(s_a, s_b, **opers);
+	if (is_sorted(*s_a) && list_len(s_b) == 0)
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
 }
 
 int	main(int argc, char **argv)
