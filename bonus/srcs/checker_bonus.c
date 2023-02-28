@@ -60,6 +60,14 @@ void	init_valid_operations(char ***valid_operations)
 	(*valid_operations)[11] = NULL;
 }
 
+void	close_program(t_wrap *ptrs)
+{
+	free_list(ptrs->node_ptr);
+	ft_free_matrix((void**)ptrs->valid_ops_ptr);
+	free(ptrs->instruct_op);
+	exit(1);
+}
+
 int	main(int argc, char **argv)
 {
 	char 	buf[4];
