@@ -19,18 +19,20 @@ static void	free_stuff(t_wrap *wrap)
 	free_list(wrap->stack_b);
 }
 
-char	*get_stdin_instruction(t_node **operations, char **valid_operations)
+char	*eval_oper(t_opers **operations, char **valid_operations, t_wrap *wrap)
 {
 	char	*instruction;
 
-	instruction = get_next_line(1);
+	instruction = get_next_line(0);
 	if (instruction != NULL)
 	{
 		if (is_valid_operation(instruction, valid_operations))
 			return (instruction);
 		free(instruction);
-		free_list(operations);
-		ft_free_matrix((void**)valid_operations);
+		wrap->node_ptr = operations;
+		wrap->valid_ops_ptr = valid_operations;
+		free_stuff(wrap);
+		write(1, "Error\n", 6);
 		exit(1);
 	}
 	return (NULL);
