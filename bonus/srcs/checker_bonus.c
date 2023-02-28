@@ -60,6 +60,23 @@ void	init_valid_operations(char ***valid_operations)
 	(*valid_operations)[11] = NULL;
 }
 
+char	*get_stdin_instruction(t_node **operations, char **valid_operations)
+{
+	char	*instruction;
+
+	instruction = get_next_line(1);
+	if (instruction != NULL)
+	{
+		if (is_valid_operation(instruction, valid_operations))
+			return (instruction);
+		free(instruction);
+		free_list(operations);
+		ft_free_matrix((void**)valid_operations);
+		exit(1);
+	}
+	return (NULL);
+}
+
 void	close_program(t_wrap *ptrs)
 {
 	free_list(ptrs->node_ptr);
