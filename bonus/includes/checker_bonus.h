@@ -16,12 +16,8 @@
 
 typedef struct s_node
 {
-	char			*data;
+	int				data;
 	int				idx;
-	int				curr_pos;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
 	struct s_node	*next;
 }	t_node;
 
