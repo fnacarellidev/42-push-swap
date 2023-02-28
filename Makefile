@@ -62,14 +62,19 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	clang $(FLAGS) $(OBJS) -o $(NAME)
 
-bonus : $(BONUSOBJS)
-	clang $(FLAGS) $(BONUSOBJS) -o $(NAMEBONUS)
+$(NAMEBONUS) : $(BONUSOBJS) $(GNLLIB)
+	clang $(FLAGS) -I./bonus/includes -I./bonus/srcs/get_next_line/ $(BONUSOBJS) $(GNLLIB) -o $(NAMEBONUS)
+
+bonus : $(NAMEBONUS)
+
+$(GNLLIB) : $(GNLOBJS)
+	ar rcs $(GNLLIB) $(GNLOBJS)
 
 %.o : %.c
 	clang $(FLAGS) -I ./ -c $< -o $@
 
 clean :
-	rm -rf $(OBJS) $(BONUSOBJS)
+	rm -rf $(OBJS) $(BONUSOBJS) $(GNLOBJS) $(GNLLIB)
 
 fclean : clean
 	rm -rf $(NAME) $(NAMEBONUS)
