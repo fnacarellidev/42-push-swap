@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 15:22:29 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:37:34 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -43,7 +43,6 @@ int			ft_has_only_space(char *str);
 int			ft_power(int base, int exponent);
 int			ft_strncmp(char *s1, char *s2, int n);
 int			ft_atoi(const char *nptr);
-void		ft_bzero(char buf[4]);
 void		free_list(t_node **head);
 void		ft_free_matrix(void **matrix);
 void		eval_input(int argc, char **argv);
