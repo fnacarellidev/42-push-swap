@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 18:30:02 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 14:21:42 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -16,7 +16,7 @@
 
 typedef struct s_node
 {
-	int				data;
+	char			*data;
 	struct s_node	*next;
 }	t_node;
 
