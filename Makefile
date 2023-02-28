@@ -41,10 +41,14 @@ BONUSFILES =	utils/ft_bzero_bonus \
 				utils/ft_isspace_bonus \
 				utils/ft_power_bonus \
 				utils/ft_is_sorted_bonus \
+				linked_list/free_list_bonus \
+				linked_list/list_len_bonus \
+				linked_list/new_node_bonus \
+				linked_list/node_add_back_bonus \
+				linked_list/node_add_front_bonus \
 				ft_atoi_bonus \
 				ft_latoi_bonus \
 				eval_input_bonus \
-				linked_list_utils_bonus \
 				checker_bonus
 
 GNLFILES =	get_next_line/get_next_line \
