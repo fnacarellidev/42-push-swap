@@ -85,6 +85,26 @@ void	close_program(t_wrap *ptrs)
 	exit(1);
 }
 
+void	checker(t_node ***operations, char **valid_operations)
+{
+	t_node	*node;
+	t_wrap	wrapper;
+	char	*stdin_instruction;
+
+	wrapper.node_ptr = *operations;
+	wrapper.valid_ops_ptr = valid_operations;
+	while (1)
+	{
+		stdin_instruction = get_stdin_instruction(*operations, valid_operations);
+		wrapper.instruct_op = stdin_instruction;
+		if (stdin_instruction == NULL)
+			close_program(&wrapper);
+		node = new_node(stdin_instruction);
+		node_add_back(*operations, node);
+		free(stdin_instruction);
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	char 	buf[4];
