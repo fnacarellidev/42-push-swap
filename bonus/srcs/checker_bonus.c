@@ -11,19 +11,7 @@
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
 
-void    ft_print_stack(t_node *stack)
 {
-    int    i;
-
-    i = 0;
-    while (stack)
-    {
-        printf("Node %d = %s", ++i, stack->data);
-        stack = stack->next;
-    }
-    printf("\n");
-}
-
 }
 
 char	*get_stdin_instruction(t_node **operations, char **valid_operations)
