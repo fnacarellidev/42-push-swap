@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 14:52:33 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 15:06:44 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -52,5 +52,6 @@ t_node		*new_node(char *data);
 char		*ft_strdup(char *str);
 long int	ft_latoi(const char *nptr);
 char		*get_next_line(int fd);
+void		node_add_front(t_node **head, t_node *node);
 
 #endif
