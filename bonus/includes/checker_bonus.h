@@ -46,5 +46,6 @@ void		node_add_back(t_node **head, t_node *node);
 t_node		*new_node(char *data);
 char		*ft_strdup(char *str);
 long int	ft_latoi(const char *nptr);
+char		*get_next_line(int fd);
 
 #endif
