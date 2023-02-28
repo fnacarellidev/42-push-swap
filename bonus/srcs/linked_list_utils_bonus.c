@@ -56,6 +56,18 @@ static void	del_last_node(t_node **head)
 	}
 }
 
+t_node	*new_node(char *data)
+{
+	t_node	*new_node;
+
+	new_node = malloc(sizeof(t_node));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->data = ft_strdup(data);
+	new_node->next = NULL;
+	return (new_node);
+}
+
 void	free_list(t_node **head)
 {
 	int	i;
