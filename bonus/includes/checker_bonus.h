@@ -20,6 +20,13 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
+typedef struct s_wrap
+{
+	t_node	**node_ptr;
+	char	**valid_ops_ptr;
+	char	*instruct_op;
+}	t_wrap;
+
 int			ft_issign(char c);
 int			ft_isspace(char c);
 int			ft_isnumber(char c);
