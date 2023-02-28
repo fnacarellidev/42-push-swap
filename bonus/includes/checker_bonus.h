@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 17:37:34 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:42:34 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -29,9 +29,10 @@ typedef struct s_opers
 
 typedef struct s_wrap
 {
-	t_node	**node_ptr;
+	t_node	**stack_a;
+	t_node	**stack_b;
+	t_opers	**node_ptr;
 	char	**valid_ops_ptr;
-	char	*instruct_op;
 }	t_wrap;
 
 int			ft_issign(char c);
