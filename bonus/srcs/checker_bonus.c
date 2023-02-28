@@ -11,7 +11,12 @@
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
 
+static void	free_stuff(t_wrap *wrap)
 {
+	free_operation_list(wrap->node_ptr);
+	ft_free_matrix((void **)(wrap->valid_ops_ptr));
+	free_list(wrap->stack_a);
+	free_list(wrap->stack_b);
 }
 
 char	*get_stdin_instruction(t_node **operations, char **valid_operations)
