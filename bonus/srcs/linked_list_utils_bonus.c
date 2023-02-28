@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:30:32 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 14:36:11 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 13:25:24 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
@@ -40,6 +40,7 @@ static void	del_last_node(t_node **head)
 		{
 			if (tmp->next == NULL)
 			{
+				free(tmp->data);
 				free(tmp);
 				*head = NULL;
 			}
@@ -47,6 +48,7 @@ static void	del_last_node(t_node **head)
 			{
 				while (tmp->next->next != NULL)
 					tmp = tmp->next;
+				free(tmp->next->data);
 				free(tmp->next);
 				tmp->next = NULL;
 			}
