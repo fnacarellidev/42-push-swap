@@ -6,11 +6,24 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:35:48 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 18:30:26 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 14:43:28 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
 #include <stdio.h>
+
+void    ft_print_stack(t_node *stack)
+{
+    int    i;
+
+    i = 0;
+    while (stack)
+    {
+        printf("Node %d = %s", ++i, stack->data);
+        stack = stack->next;
+    }
+    printf("\n");
+}
 
 int		is_valid_operation(char *instruction, char **valid_operations)
 {
