@@ -64,20 +64,22 @@ void	checker(t_opers ***opers, char **std_opers, t_node **s_a, t_node **s_b)
 
 int	main(int argc, char **argv)
 {
-	char 	buf[4];
+	t_wrap	wrap;	
+	t_node	**stack_a;
+	t_node	**stack_b;
 	char	**valid_operations;
+	t_opers	**operations;
 
 	eval_input(argc, argv);
+	operations = malloc(sizeof(t_node *));
+	*operations = NULL;
 	init_valid_operations(&valid_operations);
-	while (read(1, buf, 4))
-	{
-		if (!is_valid_operation(buf, valid_operations))
-		{
-			write(1, "Error\n", 6);
-			break ;
-		}
-		ft_bzero(buf);
-	}
-	ft_free_matrix((void**)valid_operations);
+	set_stacks(&stack_a, &stack_b, argc, argv);
+	wrap.stack_a = stack_a;
+	wrap.stack_b = stack_b;
+	wrap.valid_ops_ptr = valid_operations;
+	wrap.node_ptr = operations;
+	checker(&operations, valid_operations, stack_a, stack_b);
+	free_stuff(&wrap);
 	return (0);
 }
