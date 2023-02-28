@@ -38,14 +38,7 @@ char	*eval_oper(t_opers **operations, char **valid_operations, t_wrap *wrap)
 	return (NULL);
 }
 
-void	close_program(t_wrap *ptrs)
 {
-	free_list(ptrs->node_ptr);
-	ft_free_matrix((void**)ptrs->valid_ops_ptr);
-	free(ptrs->instruct_op);
-	exit(1);
-}
-
 void	checker(t_node ***operations, char **valid_operations)
 {
 	t_node	*node;
