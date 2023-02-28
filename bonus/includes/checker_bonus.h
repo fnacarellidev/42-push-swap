@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 15:06:44 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 15:22:29 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -53,5 +53,16 @@ char		*ft_strdup(char *str);
 long int	ft_latoi(const char *nptr);
 char		*get_next_line(int fd);
 void		node_add_front(t_node **head, t_node *node);
+void		push_a(t_node **stack_a, t_node **stack_b);
+void		push_b(t_node **stack_a, t_node **stack_b);
+void		rev_rotate_b(t_node **stack_b);
+void		rev_rotate_a(t_node **stack_a);
+void		rrr(t_node **stack_a, t_node **stack_b);
+void		rotate_a(t_node **stack_a);
+void		rotate_b(t_node **stack_b);
+void		rr(t_node **stack_a, t_node **stack_b);
+void		swap_a(t_node **stack_a);
+void		swap_b(t_node **stack_b);
+void		ss(t_node **stack_a, t_node **stack_b);
 
 #endif
