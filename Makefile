@@ -46,6 +46,10 @@ BONUSFILES =	utils/ft_bzero_bonus \
 				linked_list/new_node_bonus \
 				linked_list/node_add_back_bonus \
 				linked_list/node_add_front_bonus \
+				push_swap_movements/push_operations_bonus \
+				push_swap_movements/rotate_operations_bonus \
+				push_swap_movements/reverse_rotate_operations_bonus \
+				push_swap_movements/swap_operations_bonus \
 				ft_atoi_bonus \
 				ft_latoi_bonus \
 				eval_input_bonus \
