@@ -21,6 +21,12 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
+typedef struct s_opers
+{
+	char			*data;
+	struct s_opers	*next;
+}	t_opers;
+
 typedef struct s_wrap
 {
 	t_node	**node_ptr;
