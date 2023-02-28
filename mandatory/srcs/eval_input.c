@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 21:56:23 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/27 13:52:03 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:31:15 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -61,7 +61,8 @@ static int	has_non_integer(char **argv)
 		j = 0;
 		while (argv[i][j] == ' ')
 			j++;
-		if ((argv[i][j] == '-' || argv[i][j] == '+') && !ft_isnumber(argv[i][j + 1]))
+		if ((argv[i][j] == '-' || argv[i][j] == '+') \
+			&& !ft_isnumber(argv[i][j + 1]))
 			return (1);
 		if (argv[i][j] == '-' || argv[i][j] == '+')
 			j++;
