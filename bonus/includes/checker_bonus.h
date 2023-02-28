@@ -50,7 +50,7 @@ void		free_list(t_node **head);
 void		ft_free_matrix(void **matrix);
 void		eval_input(int argc, char **argv);
 void		node_add_back(t_node **head, t_node *node);
-t_node		*new_node(char *data);
+t_node		*new_node(int data);
 char		*ft_strdup(char *str);
 long int	ft_latoi(const char *nptr);
 char		*get_next_line(int fd);
