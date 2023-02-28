@@ -39,3 +39,12 @@ static void	exec(char *oper, t_node **stack_a, t_node **stack_b)
 	else if (ft_strncmp("rrr\n", oper, oper_len) == 0)
 		rrr(stack_a, stack_b);
 }
+
+void	run_opers(t_node **stack_a, t_node **stack_b, t_opers *operations)
+{
+	while (operations != NULL)
+	{
+		exec(operations->data, stack_a, stack_b);
+		operations = operations->next;
+	}
+}
