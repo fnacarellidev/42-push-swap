@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:44:22 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 17:45:14 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:30:03 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHECKER_BONUS_H
@@ -34,7 +34,6 @@ typedef struct s_wrap
 	t_opers	**node_ptr;
 	char	**valid_ops_ptr;
 }	t_wrap;
-
 
 int			ft_issign(char c);
 int			ft_isspace(char c);
