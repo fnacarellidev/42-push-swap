@@ -54,8 +54,8 @@ BONUSFILES =	utils/ft_matrix_len_bonus \
 				eval_input_bonus \
 				checker_bonus \
 				set_stacks_bonus \
-				valid_operations \
-				run_operations
+				valid_operations_bonus \
+				run_operations_bonus
 
 GNLFILES =	get_next_line/get_next_line \
 			get_next_line/get_next_line_utils
