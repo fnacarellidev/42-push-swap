@@ -6,7 +6,7 @@
 /*   By: fnacarel <fnacarel@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:35:48 by fnacarel          #+#    #+#             */
-/*   Updated: 2023/02/28 17:30:02 by fnacarel         ###   ########.fr       */
+/*   Updated: 2023/03/01 14:14:21 by fnacarel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/checker_bonus.h"
@@ -67,8 +67,8 @@ int	main(int argc, char **argv)
 	t_wrap	wrap;	
 	t_node	**stack_a;
 	t_node	**stack_b;
-	char	**valid_operations;
 	t_opers	**operations;
+	char	**valid_operations;
 
 	eval_input(argc, argv);
 	operations = malloc(sizeof(t_node *));
