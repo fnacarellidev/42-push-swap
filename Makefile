@@ -29,8 +29,7 @@ FILES = push_swap_movements/swap_operations \
 SRCS = $(addsuffix .c, $(addprefix mandatory/srcs/, $(FILES)))
 OBJS = $(SRCS:%.c=%.o)
 
-BONUSFILES =	utils/ft_bzero_bonus \
-				utils/ft_matrix_len_bonus \
+BONUSFILES =	utils/ft_matrix_len_bonus \
 				utils/ft_free_matrix_bonus \
 				utils/ft_strdup_bonus \
 				utils/ft_strlen_bonus \
